@@ -3,6 +3,7 @@ import path from 'path';
 
 // Helper to extract Next.js stream payload
 function extractLivestreams(html) {
+  if (!html) return [];
   const scriptChunks = [];
   for (const match of html.matchAll(/self\.__next_f\.push\(\[1,\"(.*?)\"\]\)/gs)) {
     scriptChunks.push(match[1]);
@@ -41,23 +42,29 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=120');
 
   try {
-    // 1. Fetch live and upcoming from vspo-schedule.com in parallel
-    const [liveRes, upcomingRes] = await Promise.all([
-      fetch('https://vspo-schedule.com/schedule/live', { headers: { 'User-Agent': 'Mozilla/5.0' } }).catch(() => null),
-      fetch('https://vspo-schedule.com/schedule/upcoming', { headers: { 'User-Agent': 'Mozilla/5.0' } }).catch(() => null),
+    // Current JST dates
+    const now = new Date(Date.now() + 9 * 3600000);
+    const formatYMD = d => d.toISOString().slice(0, 10);
+    const todayDate = formatYMD(now);
+    const yesterdayDate = formatYMD(new Date(now.getTime() - 86400000));
+    const tomorrowDate = formatYMD(new Date(now.getTime() + 86400000));
+
+    const headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' };
+
+    // Fetch live, upcoming, today, yesterday, and tomorrow in parallel
+    const [liveRes, upcomingRes, todayRes, yestRes, tomRes] = await Promise.all([
+      fetch('https://vspo-schedule.com/schedule/live', { headers }).catch(() => null),
+      fetch('https://vspo-schedule.com/schedule/upcoming', { headers }).catch(() => null),
+      fetch(`https://vspo-schedule.com/schedule/all?date=${todayDate}`, { headers }).catch(() => null),
+      fetch(`https://vspo-schedule.com/schedule/all?date=${yesterdayDate}`, { headers }).catch(() => null),
+      fetch(`https://vspo-schedule.com/schedule/all?date=${tomorrowDate}`, { headers }).catch(() => null),
     ]);
 
-    let liveItems = [];
-    let upcomingItems = [];
-
-    if (liveRes && liveRes.ok) {
-      const html = await liveRes.text();
-      liveItems = extractLivestreams(html);
-    }
-    if (upcomingRes && upcomingRes.ok) {
-      const html = await upcomingRes.text();
-      upcomingItems = extractLivestreams(html);
-    }
+    const liveItems = liveRes && liveRes.ok ? extractLivestreams(await liveRes.text()) : [];
+    const upcomingItems = upcomingRes && upcomingRes.ok ? extractLivestreams(await upcomingRes.text()) : [];
+    const todayItems = todayRes && todayRes.ok ? extractLivestreams(await todayRes.text()) : [];
+    const yestItems = yestRes && yestRes.ok ? extractLivestreams(await yestRes.text()) : [];
+    const tomItems = tomRes && tomRes.ok ? extractLivestreams(await tomRes.text()) : [];
 
     // Fallback or base data from public/schedules.json
     const localPath = path.join(process.cwd(), 'public', 'schedules.json');
@@ -66,16 +73,14 @@ export default async function handler(req, res) {
       baseSchedules = JSON.parse(fs.readFileSync(localPath, 'utf8'));
     }
 
-    if (liveItems.length === 0 && upcomingItems.length === 0) {
-      // Return base schedules directly
+    const allFetched = [...yestItems, ...tomItems, ...todayItems, ...upcomingItems, ...liveItems];
+    if (allFetched.length === 0) {
       return res.status(200).json(baseSchedules);
     }
 
-    // Merge live and upcoming updates into base schedules
+    // Map by id
     const liveMap = new Map();
-    [...upcomingItems, ...liveItems].forEach(item => {
-      liveMap.set(item.id, item);
-    });
+    allFetched.forEach(item => liveMap.set(item.id, item));
 
     const updated = baseSchedules.map(s => {
       if (liveMap.has(s.id)) {
@@ -93,12 +98,10 @@ export default async function handler(req, res) {
     return res.status(200).json(updated);
   } catch (err) {
     console.error('API Error:', err);
-    // Safe fallback to public/schedules.json
     try {
       const localPath = path.join(process.cwd(), 'public', 'schedules.json');
       if (fs.existsSync(localPath)) {
-        const baseSchedules = JSON.parse(fs.readFileSync(localPath, 'utf8'));
-        return res.status(200).json(baseSchedules);
+        return res.status(200).json(JSON.parse(fs.readFileSync(localPath, 'utf8')));
       }
     } catch (e) {
       // ignore

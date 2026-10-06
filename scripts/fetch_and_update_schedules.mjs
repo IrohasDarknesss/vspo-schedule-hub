@@ -3,6 +3,7 @@ import path from 'path';
 
 // Helper to extract Next.js stream payload
 function extractLivestreams(html) {
+  if (!html) return [];
   const scriptChunks = [];
   for (const match of html.matchAll(/self\.__next_f\.push\(\[1,\"(.*?)\"\]\)/gs)) {
     scriptChunks.push(match[1]);
@@ -80,32 +81,35 @@ async function main() {
     return null;
   }
 
-  console.log('Fetching live and upcoming streams from vspo-schedule.com...');
+  // JST dates
+  const now = new Date(Date.now() + 9 * 3600000);
+  const formatYMD = d => d.toISOString().slice(0, 10);
+  const todayDate = formatYMD(now);
+  const yesterdayDate = formatYMD(new Date(now.getTime() - 86400000));
+  const tomorrowDate = formatYMD(new Date(now.getTime() + 86400000));
+
+  console.log(`Fetching streams for Yesterday (${yesterdayDate}), Today (${todayDate}), Tomorrow (${tomorrowDate})...`);
   const headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' };
   
-  const [liveRes, upcomingRes, archiveRes] = await Promise.all([
-    fetch('https://vspo-schedule.com/schedule/live', { headers }).catch(e => { console.warn('live fetch err', e); return null; }),
-    fetch('https://vspo-schedule.com/schedule/upcoming', { headers }).catch(e => { console.warn('upcoming fetch err', e); return null; }),
-    fetch('https://vspo-schedule.com/schedule/archive', { headers }).catch(e => { console.warn('archive fetch err', e); return null; }),
+  const [liveRes, upcomingRes, todayRes, yestRes, tomRes, archiveRes] = await Promise.all([
+    fetch('https://vspo-schedule.com/schedule/live', { headers }).catch(e => null),
+    fetch('https://vspo-schedule.com/schedule/upcoming', { headers }).catch(e => null),
+    fetch(`https://vspo-schedule.com/schedule/all?date=${todayDate}`, { headers }).catch(e => null),
+    fetch(`https://vspo-schedule.com/schedule/all?date=${yesterdayDate}`, { headers }).catch(e => null),
+    fetch(`https://vspo-schedule.com/schedule/all?date=${tomorrowDate}`, { headers }).catch(e => null),
+    fetch('https://vspo-schedule.com/schedule/archive', { headers }).catch(e => null),
   ]);
 
-  let liveItems = [];
-  let upcomingItems = [];
-  let archiveItems = [];
+  const liveItems = liveRes && liveRes.ok ? extractLivestreams(await liveRes.text()) : [];
+  const upcomingItems = upcomingRes && upcomingRes.ok ? extractLivestreams(await upcomingRes.text()) : [];
+  const todayItems = todayRes && todayRes.ok ? extractLivestreams(await todayRes.text()) : [];
+  const yestItems = yestRes && yestRes.ok ? extractLivestreams(await yestRes.text()) : [];
+  const tomItems = tomRes && tomRes.ok ? extractLivestreams(await tomRes.text()) : [];
+  const archiveItems = archiveRes && archiveRes.ok ? extractLivestreams(await archiveRes.text()) : [];
 
-  if (liveRes && liveRes.ok) liveItems = extractLivestreams(await liveRes.text());
-  if (upcomingRes && upcomingRes.ok) upcomingItems = extractLivestreams(await upcomingRes.text());
-  if (archiveRes && archiveRes.ok) archiveItems = extractLivestreams(await archiveRes.text());
+  console.log(`Fetched -> Live: ${liveItems.length}, Upcoming: ${upcomingItems.length}, Today: ${todayItems.length}, Yesterday: ${yestItems.length}, Tomorrow: ${tomItems.length}, Archive: ${archiveItems.length}`);
 
-  console.log(`Fetched counts -> live: ${liveItems.length}, upcoming: ${upcomingItems.length}, archive: ${archiveItems.length}`);
-
-  // If fetch failed completely, keep existing
-  if (liveItems.length === 0 && upcomingItems.length === 0 && archiveItems.length === 0) {
-    console.log('No items fetched, keeping existing data.');
-    return;
-  }
-
-  // Load existing public/schedules.json to preserve past days
+  // Load existing public/schedules.json to preserve historical days
   const localPath = path.join(process.cwd(), 'public', 'schedules.json');
   const existingMap = new Map();
   if (fs.existsSync(localPath)) {
@@ -113,14 +117,11 @@ async function main() {
     old.forEach(s => existingMap.set(s.id, s));
   }
 
-  // Merge in order
+  // Merge in order: archive first, yesterday, tomorrow, today, upcoming, live
   const streamMap = new Map();
-  [...archiveItems, ...upcomingItems, ...liveItems].forEach(s => {
+  [...archiveItems, ...yestItems, ...tomItems, ...todayItems, ...upcomingItems, ...liveItems].forEach(s => {
     streamMap.set(s.id, s);
   });
-
-  const formattedStreams = [];
-  const memberRecentMap = {};
 
   for (const s of streamMap.values()) {
     const member = matchMember(s);

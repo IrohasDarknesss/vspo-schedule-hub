@@ -1809,7 +1809,7 @@ export const MEMBERS = [
         "platform": "youtube",
         "date": "2026-10-04 17:43",
         "duration": "2h 30m",
-        "viewCount": "15.9万回",
+        "viewCount": "16.0万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/so4CHTGmqUU/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=so4CHTGmqUU"
@@ -2495,15 +2495,15 @@ export const MEMBERS = [
         "url": "https://www.youtube.com/watch?v=28q24mbudCo"
       },
       {
-        "id": "5SarhnVfy3g",
-        "title": "【MINECRAFT】muted zoo building !!【#VSPOEN #AryaKuroha】",
-        "platform": "youtube",
-        "date": "2026-10-01 05:26",
+        "id": "2891153310",
+        "title": "✦ chill zoo building !",
+        "platform": "twitch",
+        "date": "2026-10-04 07:01",
         "duration": "2h 30m",
-        "viewCount": "0.8万回",
-        "game": "Minecraft",
-        "thumbnail": "https://i.ytimg.com/vi/5SarhnVfy3g/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=5SarhnVfy3g"
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/8ed14188c745273aacd7_aryakuroha_321697214042_1791064860//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2891153310"
       }
     ],
     "fanMark": "♢️🔪"

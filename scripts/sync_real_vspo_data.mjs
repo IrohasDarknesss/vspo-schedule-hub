@@ -84,18 +84,20 @@ function matchMember(stream) {
   return null;
 }
 
-const livePath = '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/1921/content.md';
-const upcomingPath = '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/1927/content.md';
-const archivePath = '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/1947/content.md';
-
-const rawLive = extractLivestreams(livePath);
-const rawUpcoming = extractLivestreams(upcomingPath);
-const rawArchive = extractLivestreams(archivePath);
+const paths = [
+  '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/1947/content.md', // Archive
+  '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/2066/content.md', // 10/04
+  '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/2054/content.md', // 10/05 Yesterday
+  '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/2062/content.md', // 10/06 Today
+  '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/2058/content.md', // 10/07 Tomorrow
+  '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/1927/content.md', // Upcoming
+  '/Users/kainetaylor/.gemini/antigravity/brain/a86f51ba-c871-4592-bc2b-c9c4ae75ae6f/.system_generated/steps/1921/content.md', // Live now
+];
 
 const streamMap = new Map();
-// Add in order: archive first, upcoming, then live to take precedence on status
-[...rawArchive, ...rawUpcoming, ...rawLive].forEach(s => {
-  streamMap.set(s.id, s);
+paths.forEach(p => {
+  const items = extractLivestreams(p);
+  items.forEach(s => streamMap.set(s.id, s));
 });
 
 const allRaw = [...streamMap.values()];

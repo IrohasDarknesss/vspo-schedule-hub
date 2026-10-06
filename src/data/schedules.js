@@ -5203,6 +5203,27 @@ export const REAL_SCHEDULES = [
     "description": "【MINECRAFT】zoo building !! (for real this time)【#VSPOEN #AryaKuroha】"
   },
   {
+    "id": "2891153310",
+    "time": "07:01",
+    "date": "2026-10-04",
+    "memberId": "arya-kuroha",
+    "memberName": "ARYA KUROHA",
+    "branch": "EN",
+    "title": "✦ chill zoo building !",
+    "game": "ゲーム実況",
+    "platform": "twitch",
+    "streamUrl": "https://www.twitch.tv/videos/2891153310",
+    "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/8ed14188c745273aacd7_aryakuroha_321697214042_1791064860//thumb/thumb0-640x360.jpg",
+    "viewCount": 0,
+    "status": "ended",
+    "tags": [
+      "ゲーム実況",
+      "ARYA KUROHA"
+    ],
+    "collabMembers": [],
+    "description": "✦ chill zoo building !"
+  },
+  {
     "id": "2891461932",
     "time": "14:15",
     "date": "2026-10-04",
@@ -5235,7 +5256,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=N5fF8mVRE0w",
     "thumbnail": "https://i.ytimg.com/vi/N5fF8mVRE0w/hqdefault.jpg",
-    "viewCount": 149351,
+    "viewCount": 149380,
     "status": "ended",
     "tags": [
       "ゲーム実況",
@@ -5277,7 +5298,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=WlwFP-WPkQM",
     "thumbnail": "https://i.ytimg.com/vi/WlwFP-WPkQM/hqdefault.jpg",
-    "viewCount": 115332,
+    "viewCount": 115386,
     "status": "ended",
     "tags": [
       "ゲーム実況",
@@ -5298,7 +5319,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=aQTE0W7xQ60",
     "thumbnail": "https://i.ytimg.com/vi/aQTE0W7xQ60/hqdefault.jpg",
-    "viewCount": 153746,
+    "viewCount": 153806,
     "status": "ended",
     "tags": [
       "Apex Legends",
@@ -5319,7 +5340,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=ZKuG8cNhrx4",
     "thumbnail": "https://i.ytimg.com/vi/ZKuG8cNhrx4/hqdefault.jpg",
-    "viewCount": 158206,
+    "viewCount": 158230,
     "status": "ended",
     "tags": [
       "Apex Legends",
@@ -5340,7 +5361,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=AD7-4FsGQkA",
     "thumbnail": "https://i.ytimg.com/vi/AD7-4FsGQkA/hqdefault.jpg",
-    "viewCount": 203011,
+    "viewCount": 203084,
     "status": "ended",
     "tags": [
       "Apex Legends",
@@ -5403,7 +5424,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=O27-JhgoxKE",
     "thumbnail": "https://i.ytimg.com/vi/O27-JhgoxKE/hqdefault.jpg",
-    "viewCount": 381632,
+    "viewCount": 381733,
     "status": "ended",
     "tags": [
       "Apex Legends",
@@ -5424,7 +5445,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=9T5DzDFxLkk",
     "thumbnail": "https://i.ytimg.com/vi/9T5DzDFxLkk/hqdefault.jpg",
-    "viewCount": 138717,
+    "viewCount": 138745,
     "status": "ended",
     "tags": [
       "Apex Legends",
@@ -5445,7 +5466,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=so4CHTGmqUU",
     "thumbnail": "https://i.ytimg.com/vi/so4CHTGmqUU/hqdefault.jpg",
-    "viewCount": 159485,
+    "viewCount": 159520,
     "status": "ended",
     "tags": [
       "Apex Legends",
@@ -5466,7 +5487,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=1iW-YTYcpaw",
     "thumbnail": "https://i.ytimg.com/vi/1iW-YTYcpaw/hqdefault.jpg",
-    "viewCount": 327580,
+    "viewCount": 327636,
     "status": "ended",
     "tags": [
       "Apex Legends",
@@ -5508,7 +5529,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=k28L2ocGeG4",
     "thumbnail": "https://i.ytimg.com/vi/k28L2ocGeG4/hqdefault.jpg",
-    "viewCount": 49798,
+    "viewCount": 49808,
     "status": "ended",
     "tags": [
       "PUBG",
@@ -5550,7 +5571,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=M1-huHX_pPQ",
     "thumbnail": "https://i.ytimg.com/vi/M1-huHX_pPQ/hqdefault.jpg",
-    "viewCount": 65165,
+    "viewCount": 65212,
     "status": "ended",
     "tags": [
       "PUBG",
@@ -5592,7 +5613,7 @@ export const REAL_SCHEDULES = [
     "platform": "youtube",
     "streamUrl": "https://www.youtube.com/watch?v=rdL57MzJgvE",
     "thumbnail": "https://i.ytimg.com/vi/rdL57MzJgvE/hqdefault.jpg",
-    "viewCount": 92549,
+    "viewCount": 92590,
     "status": "ended",
     "tags": [
       "雑談",
