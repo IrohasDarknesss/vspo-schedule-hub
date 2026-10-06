@@ -12,7 +12,7 @@ export default function GoodsCard({
   const handleOfficialStoreClick = (e) => {
     e.stopPropagation();
     // Direct link to official store product or search
-    const targetUrl = goods.officialUrl || goods.fallbackSearchUrl || 'https://store.vspo.jp/';
+    const targetUrl = goods.productUrl || goods.officialUrl || goods.fallbackSearchUrl || 'https://store.vspo.jp/';
     window.open(targetUrl, '_blank', 'noopener,noreferrer');
   };
 

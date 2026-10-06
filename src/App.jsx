@@ -10,6 +10,7 @@ import TalentDetailModal from './components/TalentDetailModal';
 import StoreView from './components/StoreView';
 import AnalyticsView from './components/AnalyticsView';
 import CommunityView from './components/CommunityView';
+import AuthView from './components/AuthView';
 import YoutubeApiModal from './components/YoutubeApiModal';
 import Footer from './components/Footer';
 
@@ -262,6 +263,14 @@ export default function App() {
         setCurrentTab('community');
         setViewingTalent(null);
         setSelectedStream(null);
+      } else if (hash === '#login') {
+        setCurrentTab('login');
+        setViewingTalent(null);
+        setSelectedStream(null);
+      } else if (hash === '#register') {
+        setCurrentTab('register');
+        setViewingTalent(null);
+        setSelectedStream(null);
       } else if (hash === '#admin') {
         setIsYoutubeModalOpen(true);
       } else if (hash === '#schedule' || hash === '' || hash === '#') {
@@ -450,6 +459,16 @@ export default function App() {
                     setCurrentTab('talents');
                     window.location.hash = '#talents';
                   }}
+                  onNavigateToLogin={() => {
+                    setCurrentTab('login');
+                    window.location.hash = '#login';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  onNavigateToRegister={() => {
+                    setCurrentTab('register');
+                    window.location.hash = '#register';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
                 />
               )}
 
@@ -481,6 +500,33 @@ export default function App() {
                   members={MEMBERS}
                   membersMap={membersMap}
                   onSelectMember={handleOpenTalentPage}
+                  onNavigateToLogin={() => {
+                    setCurrentTab('login');
+                    window.location.hash = '#login';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  onNavigateToRegister={() => {
+                    setCurrentTab('register');
+                    window.location.hash = '#register';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                />
+              )}
+
+              {(currentTab === 'login' || currentTab === 'register') && (
+                <AuthView
+                  mode={currentTab}
+                  onSwitchMode={(mode) => {
+                    setCurrentTab(mode);
+                    window.location.hash = `#${mode}`;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  onBackToHome={() => {
+                    setCurrentTab('schedule');
+                    window.location.hash = '#schedule';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  members={MEMBERS}
                 />
               )}
             </>

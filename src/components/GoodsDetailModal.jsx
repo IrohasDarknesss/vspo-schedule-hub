@@ -32,7 +32,7 @@ export default function GoodsDetailModal({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
 
-  const targetUrl = goods.officialUrl || goods.fallbackSearchUrl || 'https://store.vspo.jp/';
+  const targetUrl = goods.productUrl || goods.officialUrl || goods.fallbackSearchUrl || 'https://store.vspo.jp/';
 
   const handleOpenOfficialStore = () => {
     window.open(targetUrl, '_blank', 'noopener,noreferrer');

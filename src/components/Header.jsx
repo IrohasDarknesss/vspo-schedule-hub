@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Users, Star, Globe, Radio, Sparkles, ChevronDown, ExternalLink, ShoppingBag, TrendingUp, MessageSquare } from 'lucide-react';
+import { Calendar, Users, Star, Globe, Radio, Sparkles, ChevronDown, ExternalLink, ShoppingBag, TrendingUp, MessageSquare, LogIn, UserPlus } from 'lucide-react';
 import { TIMEZONES } from '../utils/timezone';
 
 export default function Header({ 
@@ -117,11 +117,40 @@ export default function Header({
               href="https://vspo.jp" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hidden md:flex items-center gap-1 text-slate-400 hover:text-slate-200 transition-colors"
+              className="hidden lg:flex items-center gap-1 text-slate-400 hover:text-slate-200 transition-colors"
             >
               <span>公式サイト</span>
               <ExternalLink className="w-3 h-3" />
             </a>
+
+            {/* User Auth Buttons (Login & Sign Up) */}
+            <div className="flex items-center gap-1.5 pl-1.5 sm:pl-2 border-l border-slate-700/80">
+              <button
+                onClick={() => setCurrentTab('login')}
+                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all flex items-center gap-1 ${
+                  currentTab === 'login'
+                    ? 'bg-[#1E293B] text-white border border-slate-600 shadow-sm'
+                    : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                }`}
+                title="会員ログイン"
+              >
+                <LogIn className="w-3.5 h-3.5 text-[#00F0FF]" />
+                <span>ログイン</span>
+              </button>
+
+              <button
+                onClick={() => setCurrentTab('register')}
+                className={`px-3 py-1 rounded-lg text-xs font-black transition-all flex items-center gap-1 ${
+                  currentTab === 'register'
+                    ? 'bg-gradient-to-r from-[#FF4687] to-[#00F0FF] text-white shadow-md'
+                    : 'bg-gradient-to-r from-[#FF4687] to-[#FF6EA2] hover:brightness-110 text-white shadow-sm'
+                }`}
+                title="無料会員登録"
+              >
+                <UserPlus className="w-3.5 h-3.5" />
+                <span>新規登録</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

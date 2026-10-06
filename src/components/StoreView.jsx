@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { 
   ShoppingBag, 
   Search, 
@@ -9,14 +9,18 @@ import {
   Check, 
   X, 
   SlidersHorizontal,
-  ChevronDown
+  ChevronDown,
+  RefreshCw,
+  CheckCircle2,
+  Clock,
+  Radio
 } from 'lucide-react';
 import GoodsCard from './GoodsCard';
 import GoodsDetailModal from './GoodsDetailModal';
 import { GOODS_CATEGORIES } from '../data/goods';
 
 export default function StoreView({
-  goods,
+  goods: initialGoods,
   members,
   membersMap,
   selectedBranch,
@@ -25,6 +29,72 @@ export default function StoreView({
   onSelectMember,
   initialMemberFilter = null
 }) {
+  // Real-time synced goods state
+  const [currentGoods, setCurrentGoods] = useState(initialGoods);
+  const [isStoreSyncing, setIsStoreSyncing] = useState(false);
+  const [lastStoreSyncTime, setLastStoreSyncTime] = useState(() => {
+    const d = new Date();
+    return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`;
+  });
+
+  // Real-time fetch from official store API
+  const fetchStoreSync = useCallback(async () => {
+    setIsStoreSyncing(true);
+    try {
+      const res = await fetch('/api/goods');
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.goods && Array.isArray(data.goods)) {
+          // Merge official live catalog with existing goods
+          // Map by handle or title
+          const officialMap = new Map();
+          data.goods.forEach(p => {
+            if (p.handle) officialMap.set(p.handle, p);
+            if (p.title) officialMap.set(p.title.trim(), p);
+          });
+
+          setCurrentGoods(prevGoods => {
+            return prevGoods.map(item => {
+              // Extract handle from productUrl if available
+              let handle = null;
+              if (item.productUrl && item.productUrl.includes('/products/')) {
+                handle = item.productUrl.split('/products/')[1]?.split('?')[0];
+              }
+              const matched = (handle && officialMap.get(handle)) || officialMap.get(item.title.trim());
+              if (matched) {
+                return {
+                  ...item,
+                  productUrl: matched.productUrl || item.productUrl,
+                  officialUrl: matched.productUrl || item.officialUrl,
+                  status: matched.status || item.status,
+                  statusLabel: matched.statusLabel || item.statusLabel,
+                  statusBadgeColor: matched.statusBadgeColor || item.statusBadgeColor,
+                  price: matched.price > 0 ? matched.price : item.price,
+                  priceFormatted: matched.priceFormatted || item.priceFormatted
+                };
+              }
+              return item;
+            });
+          });
+
+          const d = new Date();
+          setLastStoreSyncTime(`${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`);
+        }
+      }
+    } catch (e) {
+      console.warn('Realtime store fetch error:', e);
+    } finally {
+      setIsStoreSyncing(false);
+    }
+  }, []);
+
+  // Sync on mount and periodic 5-minute background refresh
+  useEffect(() => {
+    fetchStoreSync();
+    const interval = setInterval(fetchStoreSync, 300000);
+    return () => clearInterval(interval);
+  }, [fetchStoreSync]);
+
   // Filters
   const [selectedCategory, setSelectedCategory] = useState('ALL');
   const [selectedMemberId, setSelectedMemberId] = useState(initialMemberFilter || 'ALL');
@@ -36,7 +106,7 @@ export default function StoreView({
   const [selectedGoods, setSelectedGoods] = useState(null);
 
   // Sync initialMemberFilter if passed from outside
-  React.useEffect(() => {
+  useEffect(() => {
     if (initialMemberFilter) {
       setSelectedMemberId(initialMemberFilter);
     }
@@ -50,7 +120,7 @@ export default function StoreView({
 
   // Filtered goods computation
   const filteredGoods = useMemo(() => {
-    return goods.filter(item => {
+    return currentGoods.filter(item => {
       // 1. Branch filter
       if (selectedBranch !== 'ALL' && item.branch !== 'ALL' && item.branch !== selectedBranch) {
         return false;
@@ -94,7 +164,7 @@ export default function StoreView({
       }
       return 0;
     });
-  }, [goods, selectedBranch, selectedMemberId, selectedCategory, showOnlyFavorites, searchQuery, sortBy, membersMap, favorites]);
+  }, [currentGoods, selectedBranch, selectedMemberId, selectedCategory, showOnlyFavorites, searchQuery, sortBy, membersMap, favorites]);
 
   // Active filter count
   const hasActiveFilters = selectedCategory !== 'ALL' || selectedMemberId !== 'ALL' || showOnlyFavorites || searchQuery.trim() !== '' || selectedBranch !== 'ALL';
@@ -121,9 +191,17 @@ export default function StoreView({
 
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF4687]/20 border border-[#FF4687]/40 text-[#FF4687] text-xs font-black tracking-wider uppercase">
-              <ShoppingBag className="w-3.5 h-3.5" />
-              <span>VSPO! OFFICIAL STORE CATALOG</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF4687]/20 border border-[#FF4687]/40 text-[#FF4687] text-xs font-black tracking-wider uppercase">
+                <ShoppingBag className="w-3.5 h-3.5" />
+                <span>VSPO! OFFICIAL STORE CATALOG</span>
+              </div>
+
+              {/* Real-time Status Badge */}
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/40 text-emerald-400 text-[11px] font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>公式ストア在庫 リアルタイム同期中</span>
+              </div>
             </div>
 
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-gaming tracking-wide">
@@ -131,8 +209,25 @@ export default function StoreView({
             </h1>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              JP 25名・EN 7名の全32名の公式グッズを網羅！定番のアクリルスタンドから生誕記念セット、マウスパッド、ボイスまで、気になるグッズを押すと実際の公式ストア（<strong>store.vspo.jp</strong>）で直接お買い求めいただけます。
+              JP 25名・EN 7名の全32名の公式グッズを網羅！定番のアクリルスタンドから生誕記念セット、マウスパッド、ボイスまで、気になるグッズを押すと実際の公式ストア（<strong>store.vspo.jp</strong>）の個別商品ページへ直接ジャンプしてお買い求めいただけます。
             </p>
+
+            {/* Real-time Sync Details & Manual Refresh */}
+            <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-slate-400">
+              <span className="flex items-center gap-1 font-mono">
+                <Clock className="w-3.5 h-3.5 text-slate-500" />
+                <span>最終在庫確認: {lastStoreSyncTime}</span>
+              </span>
+              <span>•</span>
+              <button
+                onClick={fetchStoreSync}
+                disabled={isStoreSyncing}
+                className="inline-flex items-center gap-1.5 text-xs text-[#00F0FF] hover:text-[#38E8FF] font-bold hover:underline disabled:opacity-50"
+              >
+                <RefreshCw className={`w-3.5 h-3.5 ${isStoreSyncing ? 'animate-spin' : ''}`} />
+                <span>{isStoreSyncing ? '在庫更新中...' : '最新在庫を再確認'}</span>
+              </button>
+            </div>
           </div>
 
           {/* Jump to Real store.vspo.jp Button */}

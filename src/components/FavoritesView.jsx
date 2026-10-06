@@ -22,7 +22,9 @@ import {
   Tv,
   Smartphone,
   ShieldCheck,
-  CheckCircle2
+  CheckCircle2,
+  LogIn,
+  UserPlus
 } from 'lucide-react';
 import StreamCard from './StreamCard';
 
@@ -35,7 +37,9 @@ export default function FavoritesView({
   onToggleFavorite,
   onSelectStream,
   onSelectMember,
-  onExploreTalents
+  onExploreTalents,
+  onNavigateToLogin,
+  onNavigateToRegister
 }) {
   // Coming Soon Mode toggle (defaults to false for public release)
   const [isAdminPreview, setIsAdminPreview] = useState(false);
@@ -158,6 +162,39 @@ export default function FavoritesView({
               <p className="text-[11px] text-slate-400 text-left">
                 ※ 世界各国のタイムゾーン自動追従およびクロスデバイス同期APIの最終負荷検証を実施しています。
               </p>
+            </div>
+
+            {/* Member-Exclusive Unlock Banner & Buttons */}
+            <div className="bg-[#0A101C]/90 p-5 rounded-2xl border border-amber-500/40 max-w-xl mx-auto space-y-3 backdrop-blur-md shadow-lg text-left">
+              <div className="flex items-center gap-2 text-white font-bold text-xs sm:text-sm">
+                <Lock className="w-4 h-4 text-amber-400" />
+                <span className="font-gaming">推しリスト・クラウド同期は「会員登録・ログイン」で解放されます</span>
+              </div>
+              <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                複数端末（スマホ・PC・タブレット）での推しタレント設定の自動同期とゲリラ通知機能は、アカウント連携後にご利用いただけます。
+                会員登録は完全無料です。
+              </p>
+              <div className="pt-1 flex flex-wrap items-center gap-2.5">
+                <button
+                  type="button"
+                  onClick={onNavigateToLogin}
+                  className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-600 transition-all flex items-center gap-1.5 shadow-sm"
+                >
+                  <LogIn className="w-3.5 h-3.5 text-[#00F0FF]" />
+                  <span>ログインして確認</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={onNavigateToRegister}
+                  className="px-4 py-2 rounded-xl text-xs font-black text-slate-950 bg-gradient-to-r from-amber-400 to-[#00F0FF] hover:brightness-110 transition-all flex items-center gap-1.5 shadow-md"
+                >
+                  <UserPlus className="w-3.5 h-3.5" />
+                  <span>無料新規登録ページへ</span>
+                </button>
+                <span className="text-[10px] text-amber-400 font-medium ml-auto">
+                  ※ DB設計中のため認証ボタンは準備中状態です
+                </span>
+              </div>
             </div>
 
             {/* Cheer Button */}
