@@ -429,11 +429,11 @@ export default function StoreView({
                 : 'text-slate-400 hover:text-white hover:bg-[#141C2B]'
             }`}
           >
-            すべてのカテゴリ ({goods.length})
+            すべてのカテゴリ ({currentGoods.length})
           </button>
 
           {GOODS_CATEGORIES.map(cat => {
-            const count = goods.filter(g => g.category === cat.id).length;
+            const count = currentGoods.filter(g => g.category === cat.id).length;
             const isSelected = selectedCategory === cat.id;
             return (
               <button
@@ -520,7 +520,7 @@ export default function StoreView({
         <GoodsDetailModal
           goods={selectedGoods}
           member={selectedGoods.memberId ? membersMap[selectedGoods.memberId] : null}
-          allGoods={goods}
+          allGoods={currentGoods}
           onClose={() => setSelectedGoods(null)}
           onSelectGoods={setSelectedGoods}
           onSelectMember={onSelectMember}
