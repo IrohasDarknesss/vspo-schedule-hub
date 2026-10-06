@@ -1,16 +1,19 @@
-name: Auto Sync & Continuous Verification
+name: Auto Sync Real Schedules & Deploy
 
 on:
   schedule:
-    # Run periodically every 6 hours to ensure build health and trigger fresh deployments
-    - cron: '0 */6 * * *'
+    # Run periodically every 3 hours to automatically sync newest stream schedules
+    - cron: '0 */3 * * *'
   workflow_dispatch: # Allows manual one-click execution from GitHub Actions tab
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
-  verify-and-sync:
+  sync-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -25,12 +28,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Fetch and sync latest real-world VSPO stream schedules
+        run: node scripts/fetch_and_update_schedules.mjs
+
+      - name: Commit and push updated schedules if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/schedules.json src/data/schedules.js
+          if git diff --staged --quiet; then
+            echo "No schedule changes to commit."
+          else
+            git commit -m "chore(sync): automated live schedule update from official feed [skip ci]"
+            git push
+          fi
+
       - name: Build and verify site integrity
         run: npm run build
 
       - name: Summary
         run: |
-          echo "### 🚀 VSPO! Schedule Hub Sync & Build Verification" >> $GITHUB_STEP_SUMMARY
-          echo "- **Status:** Build verified successfully" >> $GITHUB_STEP_SUMMARY
-          echo "- **Engine:** Minute-by-minute dynamic JST real-time engine active" >> $GITHUB_STEP_SUMMARY
-          echo "- **Deploy target:** Vercel auto-deployment on main branch" >> $GITHUB_STEP_SUMMARY
+          echo "### 🚀 VSPO! Schedule Hub Real-Time Sync" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status:** Synced and verified" >> $GITHUB_STEP_SUMMARY
+          echo "- **Target:** Vercel auto-deployment" >> $GITHUB_STEP_SUMMARY

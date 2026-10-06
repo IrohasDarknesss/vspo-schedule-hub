@@ -17,6 +17,7 @@ import { MEMBERS } from './data/members';
 import { SCHEDULES, getLiveSchedules } from './data/schedules';
 import { GOODS } from './data/goods';
 import { getYoutubeApiKey, fetchLiveStreamsFromYouTube } from './utils/youtubeApi';
+import { evaluateStreamRealtime } from './utils/realtimeDate';
 
 export default function App() {
   // Navigation: 'schedule' | 'talents' | 'favorites' | 'store'
@@ -80,13 +81,45 @@ export default function App() {
     return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`;
   });
 
+  // Sync real-time schedules from remote API / schedules.json or dynamic client JST engine
+  const syncLatestSchedules = async (isManual = false) => {
+    try {
+      let res = await fetch('/api/schedules').catch(() => null);
+      if (!res || !res.ok) {
+        res = await fetch('/schedules.json').catch(() => null);
+      }
+      if (res && res.ok) {
+        const freshList = await res.json();
+        if (Array.isArray(freshList) && freshList.length > 0) {
+          setSchedules(freshList.map(item => evaluateStreamRealtime(item)));
+          if (isManual) {
+            showToast('⚡ 最新の配信スケジュールと同期しました', false);
+          }
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn('API sync fallback to client data', err);
+    }
+    // Client-side dynamic re-evaluation
+    setSchedules(getLiveSchedules());
+    if (isManual) {
+      showToast('⚡ JST時計と最新の配信状況に同期しました', false);
+    }
+  };
+
+  // Initial load check
+  useEffect(() => {
+    syncLatestSchedules(false);
+  }, []);
+
   // Second-by-second countdown for the minute-by-minute refresh engine
   useEffect(() => {
     const timer = setInterval(() => {
       setAutoSyncCountdown(prev => {
         if (prev <= 1) {
           // Re-evaluate schedules and trigger sync
-          setSchedules(getLiveSchedules());
+          syncLatestSchedules(false);
           if (youtubeApiKey) {
             syncYouTubeStreams(youtubeApiKey, false);
           }
@@ -115,16 +148,13 @@ export default function App() {
   // Manual refresh handler
   const handleRefreshSchedules = async () => {
     setIsRefreshing(true);
-    setSchedules(getLiveSchedules());
+    await syncLatestSchedules(true);
     setAutoSyncCountdown(60); // Reset timer on manual refresh
     const d = new Date();
     setLastSyncTime(`${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`);
 
     if (youtubeApiKey) {
       await syncYouTubeStreams(youtubeApiKey, true);
-      showToast('⚡ YouTube API実データ＆JST時計と同期しました', false);
-    } else {
-      showToast('⚡ JST時計と最新の配信状況に同期しました', false);
     }
     setTimeout(() => {
       setIsRefreshing(false);

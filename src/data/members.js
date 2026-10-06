@@ -1,6 +1,6 @@
-// VSPO! JP & EN Full Official Members Database (32 Members: JP 25, EN 7)
-// NO PAID APIs / NO BILLING - Real YouTube statistics & Official Fan Information
-// Verified from Official VSPO! / VSTATS / Yutura / Unofficial Wiki
+// VSPO! Members Master Data
+// 32 Active Members (JP 25 + EN 7)
+// Updated with real October 2026 recent streams
 
 export const MEMBERS = [
   {
@@ -40,59 +40,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "pRGcQq8Jq3E",
-        "title": "【APEX】CRCUP SCRIM day2 あのIeNaGaコーチ【ぶいすぽっ！/花芽すみれ】",
+        "id": "NCdL_Y_VQxc",
+        "title": "おはよ～あさだよ【ぶいすぽっ！/花芽すみれ】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
+        "date": "2026-10-06 08:11",
+        "duration": "2h 30m",
+        "viewCount": "15.3万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/NCdL_Y_VQxc/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=NCdL_Y_VQxc"
+      },
+      {
+        "id": "9T5DzDFxLkk",
+        "title": "【APEX】第11回 CRCUP本番 inVS ~戦いの中で~ #たなかWIN【ぶいすぽっ！/花芽すみれ】",
+        "platform": "youtube",
+        "date": "2026-10-04 17:42",
+        "duration": "2h 30m",
+        "viewCount": "13.9万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/9T5DzDFxLkk/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=9T5DzDFxLkk"
+      },
+      {
+        "id": "pRGcQq8Jq3E",
+        "title": "【APEX】CRCUP SCRIM day3 あのIeNaGaコーチ【ぶいすぽっ！/花芽すみれ】",
+        "platform": "youtube",
+        "date": "2026-10-03 20:00",
+        "duration": "2h 30m",
+        "viewCount": "7.9万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/pRGcQq8Jq3E/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=pRGcQq8Jq3E"
       },
       {
-        "id": "yyitOUS_y-E",
-        "title": "【APEX】CRカップ顔合わせ！カスタム参加 /なっち３バニラ３【ぶいすぽっ！/花芽すみれ】",
-        "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "Apex Legends",
-        "thumbnail": "https://i.ytimg.com/vi/yyitOUS_y-E/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=yyitOUS_y-E"
-      },
-      {
         "id": "RE1yLae5mh4",
-        "title": "【APEX】ちょいランク→CRCUP SCRIM あのIeNaGaコーチ【ぶいすぽっ！/花芽すみれ】",
+        "title": "【APEX】CRCUP SCRIM day2 あのIeNaGaコーチ【ぶいすぽっ！/花芽すみれ】",
         "platform": "youtube",
-        "date": "2026-10-03 20:00",
-        "duration": "3h 30m",
-        "viewCount": "22.0万回",
+        "date": "2026-10-02 20:04",
+        "duration": "2h 30m",
+        "viewCount": "7.8万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/RE1yLae5mh4/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=RE1yLae5mh4"
       },
       {
-        "id": "77lG-Kx3xjY",
-        "title": "【APEX】ダイヤが近づいてきたあ / リサ・リコ【ぶいすぽっ！/花芽すみれ】",
+        "id": "yyitOUS_y-E",
+        "title": "【APEX】ちょいランク→CRCUP SCRIM あのIeNaGaコーチ【ぶいすぽっ！/花芽すみれ】",
         "platform": "youtube",
-        "date": "2026-10-02 20:00",
-        "duration": "3h 30m",
-        "viewCount": "25.5万回",
+        "date": "2026-10-01 19:16",
+        "duration": "2h 30m",
+        "viewCount": "10.1万回",
         "game": "Apex Legends",
-        "thumbnail": "https://i.ytimg.com/vi/77lG-Kx3xjY/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=77lG-Kx3xjY"
-      },
-      {
-        "id": "LFbFmjVPu3o",
-        "title": "【妹に運転を教える】DだのNだのPとかね。【ぶいすぽっ！/花芽すみれ】",
-        "platform": "youtube",
-        "date": "2026-10-01 20:00",
-        "duration": "3h 30m",
-        "viewCount": "29.0万回",
-        "game": "雑談",
-        "thumbnail": "https://i.ytimg.com/vi/LFbFmjVPu3o/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=LFbFmjVPu3o"
+        "thumbnail": "https://i.ytimg.com/vi/yyitOUS_y-E/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=yyitOUS_y-E"
       }
     ],
     "fanMark": "👾💤"
@@ -134,24 +134,57 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
+        "id": "Td1knDZkWKE",
+        "title": "【REPO】久々におバカなやつらとのREPOが帰ってきた【ぶいすぽ/花芽なずな】",
+        "platform": "youtube",
+        "date": "2026-10-05 21:03",
+        "duration": "2h 30m",
+        "viewCount": "13.8万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/Td1knDZkWKE/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Td1knDZkWKE"
+      },
+      {
+        "id": "2N9qWYhLoPg",
+        "title": "【Escape from Tarkov】なずぴ成長記録３日目☆なずぴ隊長についてきなさい！！！！【ぶいすぽ/花芽なずな】",
+        "platform": "youtube",
+        "date": "2026-10-05 20:00",
+        "duration": "2h 30m",
+        "viewCount": "1.8万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/2N9qWYhLoPg/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=2N9qWYhLoPg"
+      },
+      {
+        "id": "uz0u5O__cH0",
+        "title": "【歌枠】おはようございま…！♪ウワ【ぶいすぽ/花芽なずな】",
+        "platform": "youtube",
+        "date": "2026-10-04 15:48",
+        "duration": "2h 30m",
+        "viewCount": "6.1万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/uz0u5O__cH0/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=uz0u5O__cH0"
+      },
+      {
         "id": "LO9u_wTdMls",
         "title": "【APEX】え？この３人で出場ってコト…！？【ぶいすぽ/花芽なずな】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
+        "date": "2026-09-30 20:33",
+        "duration": "2h 30m",
+        "viewCount": "6.9万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/LO9u_wTdMls/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=LO9u_wTdMls"
       },
       {
         "id": "LsafXKi4N3I",
-        "title": "【Wardogs】ちょっとハマりかけか？少しだけ【ぶいすぽ/花芽なずな】",
+        "title": "【APEX】深夜に急に呼ばれたんだ　あかりん　りさ【ぶいすぽ/花芽なずな】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "Wardogs",
+        "date": "2026-09-28 04:09",
+        "duration": "2h 30m",
+        "viewCount": "10.8万回",
+        "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/LsafXKi4N3I/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=LsafXKi4N3I"
       }
@@ -195,15 +228,48 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "3KLsBuksi88",
-        "title": "【Apex Legends】今夜こそソロマス到達！ダイヤ1から駆け抜ける！【小雀とと / ぶいすぽ】",
+        "id": "__jcJTe8vco",
+        "title": "【 雑談 】なんと告知があります【 ぶいすぽ / 小雀とと 】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "Apex Legends",
-        "thumbnail": "https://i.ytimg.com/vi/3KLsBuksi88/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=3KLsBuksi88"
+        "date": "2026-10-03 20:00",
+        "duration": "2h 30m",
+        "viewCount": "7.3万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/__jcJTe8vco/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=__jcJTe8vco"
+      },
+      {
+        "id": "ia0k-HrRBn0",
+        "title": "【 DBD 】2v8まだまだやるぞ！！！ w/顔芸さん【 ぶいすぽ / 小雀とと 】",
+        "platform": "youtube",
+        "date": "2026-09-26 14:02",
+        "duration": "2h 30m",
+        "viewCount": "6.6万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/ia0k-HrRBn0/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=ia0k-HrRBn0"
+      },
+      {
+        "id": "WNAxr4E_gHg",
+        "title": "【 Cursed Companions 】ちーたるで声を使って呪文を唱えるゲームをします【 ぶいすぽ / 小雀とと 】",
+        "platform": "youtube",
+        "date": "2026-09-25 20:30",
+        "duration": "2h 30m",
+        "viewCount": "3.6万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/WNAxr4E_gHg/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=WNAxr4E_gHg"
+      },
+      {
+        "id": "ChsFoaZ5iDE",
+        "title": "【 DBD 】のんびり2v8やる【 ぶいすぽ / 小雀とと 】",
+        "platform": "youtube",
+        "date": "2026-09-24 16:35",
+        "duration": "2h 30m",
+        "viewCount": "2.7万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/ChsFoaZ5iDE/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=ChsFoaZ5iDE"
       }
     ],
     "fanMark": "🐥🔫"
@@ -245,48 +311,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "67MMEUIV_EA",
-        "title": "【APEX】CRカップ スクリム DAY2(^^)/【ぶいすぽ/一ノ瀬うるは】",
-        "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "Apex Legends",
-        "thumbnail": "https://i.ytimg.com/vi/67MMEUIV_EA/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=67MMEUIV_EA"
-      },
-      {
-        "id": "lSvLABLEhO0",
-        "title": "ぽたく集会所【ぶいすぽ/一ノ瀬うるは】",
-        "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "雑談",
-        "thumbnail": "https://i.ytimg.com/vi/lSvLABLEhO0/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=lSvLABLEhO0"
-      },
-      {
         "id": "O27-JhgoxKE",
-        "title": "【APEX】CRカップ スクリム DAY3【ぶいすぽ/一ノ瀬うるは】",
+        "title": "【APEX】CRカップ本番！！！！#おに誰WIN【ぶいすぽ/一ノ瀬うるは】",
         "platform": "youtube",
-        "date": "2026-10-03 20:00",
-        "duration": "3h 30m",
-        "viewCount": "22.0万回",
+        "date": "2026-10-04 17:40",
+        "duration": "2h 30m",
+        "viewCount": "38.2万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/O27-JhgoxKE/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=O27-JhgoxKE"
       },
       {
-        "id": "MgKZnbca1Zc",
-        "title": "【雀魂】ぶいすぽ麻雀杯！役満狙いで圧倒的勝利を掴む！【ぶいすぽ/一ノ瀬うるは】",
+        "id": "67MMEUIV_EA",
+        "title": "【APEX】CRカップ スクリム 最終日(^^)/【ぶいすぽ/一ノ瀬うるは】",
         "platform": "youtube",
-        "date": "2026-10-02 20:00",
-        "duration": "3h 30m",
-        "viewCount": "25.5万回",
-        "game": "雀魂",
+        "date": "2026-10-03 21:01",
+        "duration": "2h 30m",
+        "viewCount": "20.3万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/67MMEUIV_EA/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=67MMEUIV_EA"
+      },
+      {
+        "id": "MgKZnbca1Zc",
+        "title": "【APEX】CRカップ スクリム DAY2(^^)/【ぶいすぽ/一ノ瀬うるは】",
+        "platform": "youtube",
+        "date": "2026-10-02 21:29",
+        "duration": "2h 30m",
+        "viewCount": "20.1万回",
+        "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/MgKZnbca1Zc/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=MgKZnbca1Zc"
+      },
+      {
+        "id": "Uxa7zH4zADs",
+        "title": "【#エムホールデム】復刻コラボイベント来るぞ！運も来い！！！！【ぶいすぽ/一ノ瀬うるは】",
+        "platform": "youtube",
+        "date": "2026-10-02 20:01",
+        "duration": "2h 30m",
+        "viewCount": "7.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/Uxa7zH4zADs/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Uxa7zH4zADs"
+      },
+      {
+        "id": "LxQNn8PCRds",
+        "title": "【APEX】CRカップ スクリム DAY1(^^)/【ぶいすぽ/一ノ瀬うるは】",
+        "platform": "youtube",
+        "date": "2026-10-01 21:00",
+        "duration": "2h 30m",
+        "viewCount": "26.7万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/LxQNn8PCRds/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=LxQNn8PCRds"
       }
     ],
     "fanMark": "🌠"
@@ -328,37 +405,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "anq1F3UhITM",
-        "title": "【 APEX 】CRカップスクリム３日目！ #わんちゃんWIN 【 ぶいすぽっ！胡桃のあ 】",
+        "id": "rsa77oufgi0",
+        "title": "【 雑談 】お昼ご飯はおでんにしました【ぶいすぽっ！胡桃のあ】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
+        "date": "2026-10-05 14:47",
+        "duration": "2h 30m",
+        "viewCount": "9.8万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/rsa77oufgi0/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=rsa77oufgi0"
+      },
+      {
+        "id": "4dag7xEw-lg",
+        "title": "【 APEX→Fall Guys 】優勝する配信 #わんちゃんWIN 遅延あり【 ぶいすぽっ！胡桃のあ 】",
+        "platform": "youtube",
+        "date": "2026-10-04 17:21",
+        "duration": "2h 30m",
+        "viewCount": "22.4万回",
         "game": "Apex Legends",
-        "thumbnail": "https://i.ytimg.com/vi/anq1F3UhITM/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=anq1F3UhITM"
+        "thumbnail": "https://i.ytimg.com/vi/4dag7xEw-lg/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=4dag7xEw-lg"
       },
       {
         "id": "izeUKJg8BtQ",
-        "title": "【 APEX 】CRカップスクリム２日目！ #わんちゃんWIN 【 ぶいすぽっ！胡桃のあ 】",
+        "title": "【 APEX 】CRカップスクリム３日目！ #わんちゃんWIN 【 ぶいすぽっ！胡桃のあ 】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
+        "date": "2026-10-03 21:04",
+        "duration": "2h 30m",
+        "viewCount": "10.9万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/izeUKJg8BtQ/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=izeUKJg8BtQ"
       },
       {
         "id": "JawD7Ojzwvg",
-        "title": "【ぶいすぽ大会振り返り】みんなでお疲れ様打ち上げコラボ！【胡桃のあ】",
+        "title": "【 APEX 】CRカップスクリム２日目！ #わんちゃんWIN 【 ぶいすぽっ！胡桃のあ 】",
         "platform": "youtube",
-        "date": "2026-10-03 20:00",
-        "duration": "3h 30m",
-        "viewCount": "22.0万回",
-        "game": "雑談",
+        "date": "2026-10-02 21:06",
+        "duration": "2h 30m",
+        "viewCount": "11.7万回",
+        "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/JawD7Ojzwvg/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=JawD7Ojzwvg"
+      },
+      {
+        "id": "yTzkcFh_lgw",
+        "title": "【 m HOLD’EM 】復刻コラボイベントがくるらしいぞ！【 ぶいすぽっ！胡桃のあ 】",
+        "platform": "youtube",
+        "date": "2026-10-02 20:01",
+        "duration": "2h 30m",
+        "viewCount": "3.5万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/yTzkcFh_lgw/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=yTzkcFh_lgw"
       }
     ],
     "fanMark": "🧸♔"
@@ -400,26 +499,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "Q-pwktzl3cY",
-        "title": "【VALORANT】ふるぱ【ぶいすぽ/兎咲ミミ】",
+        "id": "HY6MAk-Vl9s",
+        "title": "【PUBG】メンバーとあそぶ会 part2【ぶいすぽ/兎咲ミミ】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "VALORANT",
-        "thumbnail": "https://i.ytimg.com/vi/Q-pwktzl3cY/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=Q-pwktzl3cY"
+        "date": "2026-10-05 17:59",
+        "duration": "2h 30m",
+        "viewCount": "11.4万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/HY6MAk-Vl9s/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=HY6MAk-Vl9s"
       },
       {
         "id": "J0G96r3ghHQ",
         "title": "【PUBG】メンバーとあそぶ会【ぶいすぽ/兎咲ミミ】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
+        "date": "2026-10-04 22:02",
+        "duration": "2h 30m",
+        "viewCount": "8.1万回",
         "game": "PUBG",
         "thumbnail": "https://i.ytimg.com/vi/J0G96r3ghHQ/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=J0G96r3ghHQ"
+      },
+      {
+        "id": "uEGSj4aqVek",
+        "title": "【VALORANT 】そろこんぺ【ぶいすぽ/兎咲ミミ】",
+        "platform": "youtube",
+        "date": "2026-10-03 17:13",
+        "duration": "2h 30m",
+        "viewCount": "5.9万回",
+        "game": "VALORANT",
+        "thumbnail": "https://i.ytimg.com/vi/uEGSj4aqVek/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=uEGSj4aqVek"
+      },
+      {
+        "id": "nTRSL_ia_RA",
+        "title": "【妹に運転を教える】説明下手だけど優しく教えることはできるよ^^【ぶいすぽ/兎咲ミミ】",
+        "platform": "youtube",
+        "date": "2026-10-01 18:45",
+        "duration": "2h 30m",
+        "viewCount": "6.0万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/nTRSL_ia_RA/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=nTRSL_ia_RA"
+      },
+      {
+        "id": "dzXFNl9ruZo",
+        "title": "【Minecraft Dungeons II】ぶいすぽメンバーと一緒にダンジョンへ！【ぶいすぽ/兎咲ミミ】",
+        "platform": "youtube",
+        "date": "2026-09-30 17:59",
+        "duration": "2h 30m",
+        "viewCount": "3.9万回",
+        "game": "Minecraft",
+        "thumbnail": "https://i.ytimg.com/vi/dzXFNl9ruZo/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=dzXFNl9ruZo"
       }
     ],
     "fanMark": "🐰🍭"
@@ -461,26 +593,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
+        "id": "j61xeQLsvt0",
+        "title": "【BOMBANANA】見ざる言わざる聞かざる！協力して爆弾解除せよ。w/早乙女ベリー3.小柳ロウ【空澄セナ/ぶいすぽっ！】",
+        "platform": "youtube",
+        "date": "2026-10-05 20:03",
+        "duration": "2h 30m",
+        "viewCount": "8.2万回",
+        "game": "BOMBANANA!",
+        "thumbnail": "https://i.ytimg.com/vi/j61xeQLsvt0/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=j61xeQLsvt0"
+      },
+      {
+        "id": "K70E8dkMC4A",
+        "title": "【深夜】チルLoL。朝までコースなので睡眠に最適です。【空澄セナ/ぶいすぽっ！】",
+        "platform": "youtube",
+        "date": "2026-10-04 03:04",
+        "duration": "2h 30m",
+        "viewCount": "9.5万回",
+        "game": "League of Legends",
+        "thumbnail": "https://i.ytimg.com/vi/K70E8dkMC4A/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=K70E8dkMC4A"
+      },
+      {
         "id": "OW7LrJpp-dE",
         "title": "【LoL】大好きなアカリが今、強いと聞いて。【空澄セナ/ぶいすぽっ！】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
+        "date": "2026-10-02 21:31",
+        "duration": "2h 30m",
+        "viewCount": "4.9万回",
         "game": "League of Legends",
         "thumbnail": "https://i.ytimg.com/vi/OW7LrJpp-dE/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=OW7LrJpp-dE"
       },
       {
-        "id": "1MSAb0Opz90",
-        "title": "【歌枠】日曜日の夜にゆったり歌うSinging Stream♪【空澄セナ/ぶいすぽっ！】",
+        "id": "vMr5WfaLOi0",
+        "title": "【m HOLD’EM】復刻コラボがくるらしいですよ！！【空澄セナ/ぶいすぽっ！】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "歌枠",
-        "thumbnail": "https://i.ytimg.com/vi/1MSAb0Opz90/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=1MSAb0Opz90"
+        "date": "2026-10-02 20:01",
+        "duration": "2h 30m",
+        "viewCount": "1.9万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/vMr5WfaLOi0/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=vMr5WfaLOi0"
+      },
+      {
+        "id": "5V0Cr4NB4Bw",
+        "title": "【深夜雑談】ただチルな夜を過ごす。【空澄セナ/ぶいすぽっ！】",
+        "platform": "youtube",
+        "date": "2026-10-01 23:40",
+        "duration": "2h 30m",
+        "viewCount": "5.9万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/5V0Cr4NB4Bw/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=5V0Cr4NB4Bw"
       }
     ],
     "fanMark": "🗝♤"
@@ -522,48 +687,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "-DyueUeSWiw",
-        "title": "【 Apex Legends 】 CRCUP スクリム day2【ぶいすぽっ！/橘ひなの】",
+        "id": "2893214380",
+        "title": "昼活",
+        "platform": "twitch",
+        "date": "2026-10-06 14:15",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "雑談",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/0f8a5cddfed2b61cff48_hinanotachiba7_316608116083_1791263748//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2893214380"
+      },
+      {
+        "id": "VvnkJWtjVDQ",
+        "title": "【 PUBG 】 あかちゃんです w/べにありさかレイド【ぶいすぽっ！/橘ひなの】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
+        "date": "2026-10-05 22:36",
+        "duration": "2h 30m",
+        "viewCount": "30.0万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/VvnkJWtjVDQ/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=VvnkJWtjVDQ"
+      },
+      {
+        "id": "2892390733",
+        "title": "17時くらいまで",
+        "platform": "twitch",
+        "date": "2026-10-05 15:21",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/f21fb6dc89fb1d4fb8db_hinanotachiba7_316604099955_1791181310//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2892390733"
+      },
+      {
+        "id": "1iW-YTYcpaw",
+        "title": "【 Apex Legends 】 CRCUP 本番！ #蟹かきWIN【ぶいすぽっ！/橘ひなの】",
+        "platform": "youtube",
+        "date": "2026-10-04 17:45",
+        "duration": "2h 30m",
+        "viewCount": "32.8万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/1iW-YTYcpaw/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=1iW-YTYcpaw"
+      },
+      {
+        "id": "-DyueUeSWiw",
+        "title": "【 Apex Legends 】 CRCUP スクリム day3 #蟹かきWIN【ぶいすぽっ！/橘ひなの】",
+        "platform": "youtube",
+        "date": "2026-10-03 21:00",
+        "duration": "2h 30m",
+        "viewCount": "23.6万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/-DyueUeSWiw/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=-DyueUeSWiw"
-      },
-      {
-        "id": "AhWNo51xC20",
-        "title": "【 Apex Legends 】 CRカップ修行編 w/りんしゃんつかいさん【ぶいすぽっ！/橘ひなの】",
-        "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "Apex Legends",
-        "thumbnail": "https://i.ytimg.com/vi/AhWNo51xC20/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=AhWNo51xC20"
-      },
-      {
-        "id": "CBeDk7H0zPQ",
-        "title": "【 Minecraft 】 めちゃくちゃ面白そうなゲームをぶいすぽメンバーとやる！！！【ぶいすぽっ！/橘ひなの】",
-        "platform": "youtube",
-        "date": "2026-10-03 20:00",
-        "duration": "3h 30m",
-        "viewCount": "22.0万回",
-        "game": "Minecraft",
-        "thumbnail": "https://i.ytimg.com/vi/CBeDk7H0zPQ/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=CBeDk7H0zPQ"
-      },
-      {
-        "id": "kB1eHEUXFJY",
-        "title": "【 BOMBANANA! 】 やったるで🐵【ぶいすぽっ！/橘ひなの】",
-        "platform": "youtube",
-        "date": "2026-10-02 20:00",
-        "duration": "3h 30m",
-        "viewCount": "25.5万回",
-        "game": "BOMBANANA!",
-        "thumbnail": "https://i.ytimg.com/vi/kB1eHEUXFJY/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=kB1eHEUXFJY"
       }
     ],
     "fanMark": "🍫💘"
@@ -605,26 +781,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "jOsI8gGkwSc",
-        "title": "【ぶいすぽフルパ】うるさすぎて鼓膜崩壊VALORANTマッチｗｗ【英リサ / ぶいすぽ】",
+        "id": "yYpCcfBzpxI",
+        "title": "【APEX】awawawawaa/デュク氏、山P【ぶいすぽっ！/英リサ】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "VALORANT",
-        "thumbnail": "https://i.ytimg.com/vi/jOsI8gGkwSc/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=jOsI8gGkwSc"
+        "date": "2026-10-05 22:40",
+        "duration": "2h 30m",
+        "viewCount": "24.3万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/yYpCcfBzpxI/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=yYpCcfBzpxI"
       },
       {
-        "id": "Mo8deWV8cko",
-        "title": "【Apex Legends】マスターいくぞおおお！狂気と執念のランク【英リサ / ぶいすぽ】",
+        "id": "j-E4Th5MBhU",
+        "title": "【APEX】まずは俺を助けろ【ぶいすぽっ！/英リサ】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
+        "date": "2026-10-05 12:00",
+        "duration": "2h 30m",
+        "viewCount": "32.2万回",
         "game": "Apex Legends",
-        "thumbnail": "https://i.ytimg.com/vi/Mo8deWV8cko/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=Mo8deWV8cko"
+        "thumbnail": "https://i.ytimg.com/vi/j-E4Th5MBhU/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=j-E4Th5MBhU"
+      },
+      {
+        "id": "4ybk8pa3U0A",
+        "title": "【VALORANT→漢字でGO】なんと、フルパ・・・・・・・・です/あじゃさん、酢さん、まざーさん、らっしー【ぶいすぽっ！/英リサ】",
+        "platform": "youtube",
+        "date": "2026-10-03 21:28",
+        "duration": "2h 30m",
+        "viewCount": "14.6万回",
+        "game": "VALORANT",
+        "thumbnail": "https://i.ytimg.com/vi/4ybk8pa3U0A/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=4ybk8pa3U0A"
+      },
+      {
+        "id": "mJxGtLauGDg",
+        "title": "【APEX】たのしー！！【ぶいすぽっ！/英リサ】",
+        "platform": "youtube",
+        "date": "2026-10-03 06:13",
+        "duration": "2h 30m",
+        "viewCount": "13.5万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/mJxGtLauGDg/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=mJxGtLauGDg"
+      },
+      {
+        "id": "g-poX_pybXY",
+        "title": "眠ってないので、まだ夜",
+        "platform": "youtube",
+        "date": "2026-10-02 05:05",
+        "duration": "2h 30m",
+        "viewCount": "15.0万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/g-poX_pybXY/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=g-poX_pybXY"
       }
     ],
     "fanMark": "💐"
@@ -666,26 +875,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "zZkP17P1_Wk",
-        "title": "Slow Bloom / Kisaragi Ren [#DIAMONDintheROUGH] MV",
-        "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "オリジナル曲",
-        "thumbnail": "https://i.ytimg.com/vi/zZkP17P1_Wk/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=zZkP17P1_Wk"
+        "id": "2892387979",
+        "title": "帰ってこい！！！！！！！！！！",
+        "platform": "twitch",
+        "date": "2026-10-05 15:12",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/347ca7a2952e519c7c96_ren_kisaragi___316604077939_1791180770//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2892387979"
       },
       {
-        "id": "rOQ28SogR7Q",
-        "title": "ずうっといっしょ！ / covered by 如月れん",
-        "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "歌ってみた",
-        "thumbnail": "https://i.ytimg.com/vi/rOQ28SogR7Q/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=rOQ28SogR7Q"
+        "id": "2888876928",
+        "title": "幽霊部員、新入部員と一緒に帰還w/かじゅ、ノリさん",
+        "platform": "twitch",
+        "date": "2026-10-01 21:52",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/abf81522f14a8b06b6c8_ren_kisaragi___316531821298_1790859130//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2888876928"
+      },
+      {
+        "id": "2887103266",
+        "title": "SteelSeriesイヤホンでPUBGをあそんでいく！！！ #PR",
+        "platform": "twitch",
+        "date": "2026-09-29 20:00",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "PUBG",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/e50021d4346c62ff6f09_ren_kisaragi___316510537201_1790679607//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2887103266"
+      },
+      {
+        "id": "2884639822",
+        "title": "何も覚えてない",
+        "platform": "twitch",
+        "date": "2026-09-27 01:16",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/fe49491234e038610c64_ren_kisaragi___316499077233_1790439390//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2884639822"
+      },
+      {
+        "id": "2884383898",
+        "title": "シューティング（APEX）を頑張る会 w/あくあさん",
+        "platform": "twitch",
+        "date": "2026-09-26 18:10",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/95c214c5ee7c5ec8aa4a_ren_kisaragi___316508966258_1790413796//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2884383898"
       }
     ],
     "fanMark": "⏰"
@@ -727,37 +969,37 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "L23h18k12kM",
-        "title": "【STREET FIGHTER 6】V最終わったらこれしよあれしよ！の予定すべて終えてきたヨ【神成きゅぴ / ぶいすぽ】",
+        "id": "8KZBw9xgPbs",
+        "title": "【PUBG】今日こそドンカツ食いたいおなかすいた🍳【ぶいすぽっ！/神成きゅぴ】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "Street Fighter 6",
-        "thumbnail": "https://i.ytimg.com/vi/L23h18k12kM/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=L23h18k12kM"
+        "date": "2026-10-05 17:59",
+        "duration": "2h 30m",
+        "viewCount": "7.5万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/8KZBw9xgPbs/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=8KZBw9xgPbs"
       },
       {
-        "id": "pGwmi58UzW8",
-        "title": "【神成きゅぴ誕生日記念ライブ】MAXIMUM VOLTAGE【ぶいすぽっ！】",
+        "id": "M1-huHX_pPQ",
+        "title": "【PUBG】久しぶりにドンカツ食いに行きます🍳【ぶいすぽっ！/神成きゅぴ】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "3Dライブ",
-        "thumbnail": "https://i.ytimg.com/vi/pGwmi58UzW8/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=pGwmi58UzW8"
+        "date": "2026-10-04 22:04",
+        "duration": "2h 30m",
+        "viewCount": "6.5万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/M1-huHX_pPQ/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=M1-huHX_pPQ"
       },
       {
-        "id": "pgXpM4l_MwI",
-        "title": "唱 / Ado covered by 神成きゅぴ",
+        "id": "a4BZtJMnZTI",
+        "title": "【雑談】金曜日張り切っていきましょうって話【ぶいすぽっ！/神成きゅぴ】",
         "platform": "youtube",
-        "date": "2026-10-03 20:00",
-        "duration": "3h 30m",
-        "viewCount": "22.0万回",
-        "game": "歌ってみた",
-        "thumbnail": "https://i.ytimg.com/vi/pgXpM4l_MwI/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=pgXpM4l_MwI"
+        "date": "2026-10-02 07:03",
+        "duration": "2h 30m",
+        "viewCount": "6.6万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/a4BZtJMnZTI/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=a4BZtJMnZTI"
       }
     ],
     "fanMark": "🌩"
@@ -799,15 +1041,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "YakU-fUjgaY",
-        "title": "【APEX】 CRcupスクリム２日目🍸 w/kamito 渋谷ハル【ぶいすぽ/八雲べに】",
+        "id": "vnCF_KuHGeQ",
+        "title": "【PUBG】ちょっくら課外授業 /w ひなーのありさかレイード【ぶいすぽ/八雲べに】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
+        "date": "2026-10-05 22:35",
+        "duration": "2h 30m",
+        "viewCount": "11.0万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/vnCF_KuHGeQ/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=vnCF_KuHGeQ"
+      },
+      {
+        "id": "ZKuG8cNhrx4",
+        "title": "【APEX】 CRcup本番🍹 #べてらんWIN   w/kamito 渋谷ハル【ぶいすぽ/八雲べに】",
+        "platform": "youtube",
+        "date": "2026-10-04 17:07",
+        "duration": "2h 30m",
+        "viewCount": "15.8万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/ZKuG8cNhrx4/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=ZKuG8cNhrx4"
+      },
+      {
+        "id": "YakU-fUjgaY",
+        "title": "【APEX】 CRcupスクリム3日目🍺 #べてらんWIN   w/kamito 渋谷ハル【ぶいすぽ/八雲べに】",
+        "platform": "youtube",
+        "date": "2026-10-03 20:59",
+        "duration": "2h 30m",
+        "viewCount": "12.1万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/YakU-fUjgaY/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=YakU-fUjgaY"
+      },
+      {
+        "id": "Mo8deWV8cko",
+        "title": "【APEX】 CRcupスクリム２日目🍸  w/kamito 渋谷ハル【ぶいすぽ/八雲べに】",
+        "platform": "youtube",
+        "date": "2026-10-02 20:54",
+        "duration": "2h 30m",
+        "viewCount": "13.1万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/Mo8deWV8cko/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Mo8deWV8cko"
+      },
+      {
+        "id": "LVN6CXioa1o",
+        "title": "【APEX】 CRcupスクリム１日目👊  w/kamito 渋谷ハル【ぶいすぽ/八雲べに】",
+        "platform": "youtube",
+        "date": "2026-10-01 19:20",
+        "duration": "2h 30m",
+        "viewCount": "14.3万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/LVN6CXioa1o/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=LVN6CXioa1o"
       }
     ],
     "fanMark": "💄💚"
@@ -849,26 +1135,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "qnHAMWXUW64",
-        "title": "【スト6】お【ぶいすぽっ！/ 藍沢エマ】",
+        "id": "6g0Dz1laESo",
+        "title": "運営さんが絶対OKしてくれないぶいすぽGGを考えるエマたち【ぶいすぽっ！/ 藍沢エマ/一ノ瀬うるは/夢野あかり/APEX】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "Street Fighter 6",
-        "thumbnail": "https://i.ytimg.com/vi/qnHAMWXUW64/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=qnHAMWXUW64"
+        "date": "2026-10-06 07:00",
+        "duration": "2h 30m",
+        "viewCount": "5.1万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/6g0Dz1laESo/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=6g0Dz1laESo"
       },
       {
-        "id": "eiqm5oVRekA",
-        "title": "【#藍沢エマ新衣装】エマOutfit6お披露目させていただきます！【ぶいすぽっ！/ 藍沢エマ】",
+        "id": "YhxKVneqTdI",
+        "title": "【雑談】ゆっくりしよ~【ぶいすぽっ！/ 藍沢エマ】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "新衣装お披露目",
-        "thumbnail": "https://i.ytimg.com/vi/eiqm5oVRekA/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=eiqm5oVRekA"
+        "date": "2026-10-05 23:47",
+        "duration": "2h 30m",
+        "viewCount": "8.9万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/YhxKVneqTdI/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=YhxKVneqTdI"
+      },
+      {
+        "id": "tqKcXv831hw",
+        "title": "【スト6】お【ぶいすぽっ！/ 藍沢エマ】",
+        "platform": "youtube",
+        "date": "2026-10-05 18:32",
+        "duration": "2h 30m",
+        "viewCount": "13.5万回",
+        "game": "Street Fighter 6",
+        "thumbnail": "https://i.ytimg.com/vi/tqKcXv831hw/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=tqKcXv831hw"
+      },
+      {
+        "id": "FGSHO6l_x4o",
+        "title": "【PUBG】ぱぶじベイビー練習します→スト6【ぶいすぽっ！/ 藍沢エマ】",
+        "platform": "youtube",
+        "date": "2026-10-04 22:02",
+        "duration": "2h 30m",
+        "viewCount": "10.5万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/FGSHO6l_x4o/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=FGSHO6l_x4o"
+      },
+      {
+        "id": "3QD3EBhEPDA",
+        "title": "2人の中二エピソードを聞いて爆笑してしまうエマ【ぶいすぽっ！/ 藍沢エマ/緋月ゆい/夕刻ロベル/APEX/ちる部】",
+        "platform": "youtube",
+        "date": "2026-10-03 07:00",
+        "duration": "2h 30m",
+        "viewCount": "6.3万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/3QD3EBhEPDA/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=3QD3EBhEPDA"
       }
     ],
     "fanMark": "🥞💫"
@@ -910,26 +1229,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "NFMmSOWPj_k",
-        "title": "アイネクライネ / 紫宮るな cover",
+        "id": "PjpTBccpSAA",
+        "title": "【 PUBG 】れんしゅ w/すもも、龍巻ちせ、白雪レイド【 ぶいすぽっ！/紫宮るな 】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "歌ってみた",
-        "thumbnail": "https://i.ytimg.com/vi/NFMmSOWPj_k/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=NFMmSOWPj_k"
+        "date": "2026-10-06 14:08",
+        "duration": "2h 30m",
+        "viewCount": "0.3万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/PjpTBccpSAA/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=PjpTBccpSAA"
       },
       {
-        "id": "m19IOd9cCUE",
-        "title": "二時間だけのバカンス / 如月れん、紫宮るな cover",
+        "id": "2891461932",
+        "title": "デスクトップのアイコン？急にでかくなってて嫌すぎる人",
+        "platform": "twitch",
+        "date": "2026-10-04 14:15",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/58bc742e045edc098c85_shinomiya_runa_316532115441_1791090908//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2891461932"
+      },
+      {
+        "id": "MKCBEdx_gWY",
+        "title": "【 APEX 】やれんのか！？ w/花芽なずな、英リサ【 ぶいすぽっ！/紫宮るな 】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "歌ってみた",
-        "thumbnail": "https://i.ytimg.com/vi/m19IOd9cCUE/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=m19IOd9cCUE"
+        "date": "2026-09-30 20:32",
+        "duration": "2h 30m",
+        "viewCount": "9.9万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/MKCBEdx_gWY/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=MKCBEdx_gWY"
+      },
+      {
+        "id": "CaYcxKktAuk",
+        "title": "アイネクライネ / 紫宮るな cover",
+        "platform": "youtube",
+        "date": "2026-09-26 20:10",
+        "duration": "2h 30m",
+        "viewCount": "50.0万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/CaYcxKktAuk/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=CaYcxKktAuk"
+      },
+      {
+        "id": "Nh3KrUumaSs",
+        "title": "【 #紫宮るな5周年 】６年目のしのみやさんです【 ぶいすぽっ！/紫宮るな 】",
+        "platform": "youtube",
+        "date": "2026-09-26 18:01",
+        "duration": "2h 30m",
+        "viewCount": "13.0万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/Nh3KrUumaSs/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Nh3KrUumaSs"
       }
     ],
     "fanMark": "☪️🐾"
@@ -971,15 +1323,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "TYyz29rNX2U",
-        "title": "【APEX】CRカップスクリム２日目！一番の強敵はラグ【ぶいすぽ / 猫汰つな】",
+        "id": "AD7-4FsGQkA",
+        "title": "【APEX】CRカップ本番！勝つぞ　#半リミットWin　※遅延あり【ぶいすぽ / 猫汰つな】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
+        "date": "2026-10-04 17:19",
+        "duration": "2h 30m",
+        "viewCount": "20.3万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/AD7-4FsGQkA/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=AD7-4FsGQkA"
+      },
+      {
+        "id": "TYyz29rNX2U",
+        "title": "【APEX】CRカップスクリム最終日！#半リミットWin【ぶいすぽ / 猫汰つな】",
+        "platform": "youtube",
+        "date": "2026-10-03 20:06",
+        "duration": "2h 30m",
+        "viewCount": "19.4万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/TYyz29rNX2U/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=TYyz29rNX2U"
+      },
+      {
+        "id": "jOsI8gGkwSc",
+        "title": "【APEX】CRカップスクリム２日目！一番の強敵はラグ【ぶいすぽ / 猫汰つな】",
+        "platform": "youtube",
+        "date": "2026-10-02 20:18",
+        "duration": "2h 30m",
+        "viewCount": "14.5万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/jOsI8gGkwSc/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=jOsI8gGkwSc"
+      },
+      {
+        "id": "2rwlqjSn1CQ",
+        "title": "【APEX】CRカップスクリム１日目行くぞーーーチーム名募集中　メンバー概要欄【ぶいすぽ / 猫汰つな】",
+        "platform": "youtube",
+        "date": "2026-10-01 20:31",
+        "duration": "2h 30m",
+        "viewCount": "11.9万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/2rwlqjSn1CQ/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=2rwlqjSn1CQ"
+      },
+      {
+        "id": "NYAESF1LZ4c",
+        "title": "【APEX】CRカップチーム練習　カスタムをやる　メンバー概要欄【ぶいすぽ / 猫汰つな】",
+        "platform": "youtube",
+        "date": "2026-09-30 20:32",
+        "duration": "2h 30m",
+        "viewCount": "15.2万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/NYAESF1LZ4c/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=NYAESF1LZ4c"
       }
     ],
     "fanMark": "🍒✨"
@@ -1021,26 +1417,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "A7o_YZfllMo",
-        "title": "【キングダムハーツHD1.5+2.5】KINGDOM HEARTS II FINAL MIX ＃７【ぶいすぽ/白波らむね】",
-        "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "KINGDOM HEARTS II",
-        "thumbnail": "https://i.ytimg.com/vi/A7o_YZfllMo/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=A7o_YZfllMo"
+        "id": "2890673359",
+        "title": "【スト６】よしなませんせー~救世主誕生~",
+        "platform": "twitch",
+        "date": "2026-10-03 21:08",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/37d41d54711db3c173cd_ramuneshiranami_316596611955_1791029284//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2890673359"
       },
       {
-        "id": "OZjJpDbk4gA",
-        "title": "【キングダムハーツHD1.5+2.5】KINGDOM HEARTS II FINAL MIX ＃８【ぶいすぽ/白波らむね】",
+        "id": "2889782975",
+        "title": "【スト６】中パン入れろ",
+        "platform": "twitch",
+        "date": "2026-10-02 22:53",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/ba891eaa9dbc3edff115_ramuneshiranami_316536504690_1790949219//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2889782975"
+      },
+      {
+        "id": "2888933068",
+        "title": "【APEX】ラッシュ使えや",
+        "platform": "twitch",
+        "date": "2026-10-01 23:29",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/aca5b5e4b815109cf8d1_ramuneshiranami_316532311282_1790864941//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2888933068"
+      },
+      {
+        "id": "2887981462",
+        "title": "【スト６】アシ強アシ強アシ強",
+        "platform": "twitch",
+        "date": "2026-09-30 20:46",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/55f2a6df47310e1b861b_ramuneshiranami_316583346419_1790768811//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2887981462"
+      },
+      {
+        "id": "A7o_YZfllMo",
+        "title": "【DELIPICKS】初めての食レポ！美味しくいただきます【ぶいすぽ/白波らむね】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "KINGDOM HEARTS II",
-        "thumbnail": "https://i.ytimg.com/vi/OZjJpDbk4gA/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=OZjJpDbk4gA"
+        "date": "2026-09-30 19:01",
+        "duration": "2h 30m",
+        "viewCount": "4.1万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/A7o_YZfllMo/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=A7o_YZfllMo"
       }
     ],
     "fanMark": "🐻‍❄️🏖"
@@ -1082,37 +1511,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "mgSpugSIgw4",
-        "title": "【 APEX 】CRカップ スクリムday2 w/ 4rmy【 ぶいすぽっ！ / 小森めと 】",
+        "id": "IFk6Sk6EIhg",
+        "title": "【 雑談 】よ～～～～【 ぶいすぽっ！ / 小森めと 】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
+        "date": "2026-10-06 16:33",
+        "duration": "2h 30m",
+        "viewCount": "0.5万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/IFk6Sk6EIhg/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=IFk6Sk6EIhg"
+      },
+      {
+        "id": "aQTE0W7xQ60",
+        "title": "【 APEX 】CRカップ 本番！！いくぞー！！ w/ 4rmyさん ぷーさん しゅーや【 ぶいすぽっ！ / 小森めと 】",
+        "platform": "youtube",
+        "date": "2026-10-04 17:00",
+        "duration": "2h 30m",
+        "viewCount": "15.4万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/aQTE0W7xQ60/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=aQTE0W7xQ60"
+      },
+      {
+        "id": "mgSpugSIgw4",
+        "title": "【 APEX 】CRカップ スクリムラスト！ w/ 4rmyさん ぷーさん 4rufaさん【 ぶいすぽっ！ / 小森めと 】",
+        "platform": "youtube",
+        "date": "2026-10-03 20:03",
+        "duration": "2h 30m",
+        "viewCount": "12.1万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/mgSpugSIgw4/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=mgSpugSIgw4"
       },
       {
         "id": "zFWrjzEFmNg",
-        "title": "【 APEX 】CRカップ スクリムday1 w/ 4rmy【 ぶいすぽっ！ / 小森めと 】",
+        "title": "【 APEX 】CRカップ スクリムday2 w/ 4rmyさん ぷーさん 4rufaさん【 ぶいすぽっ！ / 小森めと 】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
+        "date": "2026-10-02 20:13",
+        "duration": "2h 30m",
+        "viewCount": "9.2万回",
         "game": "Apex Legends",
         "thumbnail": "https://i.ytimg.com/vi/zFWrjzEFmNg/hqdefault.jpg",
         "url": "https://www.youtube.com/watch?v=zFWrjzEFmNg"
       },
       {
-        "id": "nHVrZaPlCbM",
-        "title": "【 APEX 】うおおおおおおお w/ すみー ぷーさん【 ぶいすぽっ！ / 小森めと 】",
+        "id": "4ueHvB1aGO4",
+        "title": "【 APEX 】CRカップ スクリムday1 w/ 4rmyさん ぷーさん【 ぶいすぽっ！ / 小森めと 】",
         "platform": "youtube",
-        "date": "2026-10-03 20:00",
-        "duration": "3h 30m",
-        "viewCount": "22.0万回",
+        "date": "2026-10-01 20:39",
+        "duration": "2h 30m",
+        "viewCount": "8.3万回",
         "game": "Apex Legends",
-        "thumbnail": "https://i.ytimg.com/vi/nHVrZaPlCbM/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=nHVrZaPlCbM"
+        "thumbnail": "https://i.ytimg.com/vi/4ueHvB1aGO4/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=4ueHvB1aGO4"
       }
     ],
     "fanMark": "🪐"
@@ -1154,15 +1605,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "2nz9F90qViE",
-        "title": "【スト6】キャミィでMR1700到達へ！絶対に諦めない🔥【夢野あかり / ぶいすぽ】",
-        "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "Street Fighter 6",
-        "thumbnail": "https://i.ytimg.com/vi/2nz9F90qViE/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=2nz9F90qViE"
+        "id": "2891545186",
+        "title": "CRCUP 本番!!rpr\\u0026rusan coach moyashi9san",
+        "platform": "twitch",
+        "date": "2026-10-04 17:34",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/9a7cb65b83afdc3d7951_akarindao_316600430195_1791102872//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2891545186"
+      },
+      {
+        "id": "2890665310",
+        "title": "CRCUP スクリム最後rpr\\u0026rusan coach moyashi9san",
+        "platform": "twitch",
+        "date": "2026-10-03 20:57",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/9676cd66cbb2c6c3a888_akarindao_316596521459_1791028637//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2890665310"
+      },
+      {
+        "id": "2889888531",
+        "title": "CRCUP スクリム2日目rpr\\u0026rusan coach moyashi9san",
+        "platform": "twitch",
+        "date": "2026-10-03 01:26",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/974ebabbdeb21630971e_akarindao_316593131507_1790958399//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2889888531"
+      },
+      {
+        "id": "2888800588",
+        "title": "CRCUP ここで働かせてください！！！rpr\\u0026rusan",
+        "platform": "twitch",
+        "date": "2026-10-01 18:59",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/34d8a19325c7022fac5e_akarindao_316518693361_1790848764//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2888800588"
+      },
+      {
+        "id": "2886270654",
+        "title": "【緊急で動画回してます】トゲブロで危険地帯に戦場カメラマンしにきてみた❕",
+        "platform": "twitch",
+        "date": "2026-09-28 20:18",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d3vd9lfkzbru3h/3772cc377c4df92ca3cc_akarindao_316506479857_1790594316//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2886270654"
       }
     ],
     "fanMark": "🍼"
@@ -1204,15 +1699,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "NYAESF1LZ4c",
-        "title": "【Overwatch 2】サポート専でグラマス目指す！ナノブーストで勝つ！【夜乃くろむ / ぶいすぽ】",
+        "id": "OwPC5kPoqSk",
+        "title": "〖 OW 〗ドライブいくゾォ‼️‼️‼️‼️の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "Overwatch 2",
-        "thumbnail": "https://i.ytimg.com/vi/NYAESF1LZ4c/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=NYAESF1LZ4c"
+        "date": "2026-10-05 13:54",
+        "duration": "2h 30m",
+        "viewCount": "1.9万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/OwPC5kPoqSk/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=OwPC5kPoqSk"
+      },
+      {
+        "id": "N5fF8mVRE0w",
+        "title": "首を寝違えたかえる🐸 #shorts",
+        "platform": "youtube",
+        "date": "2026-10-04 15:26",
+        "duration": "2h 30m",
+        "viewCount": "14.9万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/N5fF8mVRE0w/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=N5fF8mVRE0w"
+      },
+      {
+        "id": "WdFXjSsSdhs",
+        "title": "ねむヶﾛ🐸 #shorts",
+        "platform": "youtube",
+        "date": "2026-10-02 09:38",
+        "duration": "2h 30m",
+        "viewCount": "15.1万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/WdFXjSsSdhs/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=WdFXjSsSdhs"
+      },
+      {
+        "id": "71KSIWx_L7o",
+        "title": "〖 VALO 〗ゆいぴとランク行くであります🌟🌟🌟の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
+        "platform": "youtube",
+        "date": "2026-10-01 13:59",
+        "duration": "2h 30m",
+        "viewCount": "9.5万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/71KSIWx_L7o/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=71KSIWx_L7o"
+      },
+      {
+        "id": "JkBfMSz4kcQ",
+        "title": "〖 VALO 〗らーきんぐちゃんねる。の巻〖 ぶいすぽっ！ / 夜乃くろむ 〗",
+        "platform": "youtube",
+        "date": "2026-09-27 14:00",
+        "duration": "2h 30m",
+        "viewCount": "18.9万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/JkBfMSz4kcQ/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=JkBfMSz4kcQ"
       }
     ],
     "fanMark": "💀⛓️"
@@ -1254,15 +1793,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "R9jUaXq4a-w",
-        "title": "【初配信】はじめまして・・・！紡木こかげです 【 #ぶいすぽ新メンバー #紡木こかげ 】",
+        "id": "CKNk3ltSCww",
+        "title": "【VALORANT】そして日常へ。～大リハビリデスマッチ編～コンペはしないかも【ぶいすぽっ！ / 紡木こかげ】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/R9jUaXq4a-w/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=R9jUaXq4a-w"
+        "date": "2026-10-05 18:29",
+        "duration": "2h 30m",
+        "viewCount": "18.5万回",
+        "game": "VALORANT",
+        "thumbnail": "https://i.ytimg.com/vi/CKNk3ltSCww/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=CKNk3ltSCww"
+      },
+      {
+        "id": "so4CHTGmqUU",
+        "title": "【APEX】CRカップ本番！#青ドクWIN【ぶいすぽっ！ / 紡木こかげ】",
+        "platform": "youtube",
+        "date": "2026-10-04 17:43",
+        "duration": "2h 30m",
+        "viewCount": "15.9万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/so4CHTGmqUU/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=so4CHTGmqUU"
+      },
+      {
+        "id": "cCjc1SR66A4",
+        "title": "【APEX】カスタム→21時～CRカップスクリム3日目【ぶいすぽっ！ / 紡木こかげ】",
+        "platform": "youtube",
+        "date": "2026-10-03 18:04",
+        "duration": "2h 30m",
+        "viewCount": "16.1万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/cCjc1SR66A4/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=cCjc1SR66A4"
+      },
+      {
+        "id": "59UClH4RvF8",
+        "title": "【APEX】ソロ練→21時～CRカップスクリム2日目【ぶいすぽっ！ / 紡木こかげ】",
+        "platform": "youtube",
+        "date": "2026-10-02 18:21",
+        "duration": "2h 30m",
+        "viewCount": "16.6万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/59UClH4RvF8/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=59UClH4RvF8"
+      },
+      {
+        "id": "ltFql2OOfoE",
+        "title": "【APEX】リスナーカスタム→21時～CRカップスクリム1日目【ぶいすぽっ！ / 紡木こかげ】",
+        "platform": "youtube",
+        "date": "2026-10-01 16:54",
+        "duration": "2h 30m",
+        "viewCount": "23.2万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/ltFql2OOfoE/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=ltFql2OOfoE"
       }
     ],
     "fanMark": "📘💧"
@@ -1304,15 +1887,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "rTehLr_kmq8",
-        "title": "【初配信】はじめまして！！千燈ゆうひです！！【ぶいすぽっ！ / 千燈ゆうひ】",
+        "id": "WlwFP-WPkQM",
+        "title": "【ドラゴンクエストVII Reimagined】今進行度どんくらいなんだろ？ #11 【 ぶいすぽっ！ / 千燈ゆうひ 】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/rTehLr_kmq8/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=rTehLr_kmq8"
+        "date": "2026-10-04 16:34",
+        "duration": "2h 30m",
+        "viewCount": "11.5万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/WlwFP-WPkQM/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=WlwFP-WPkQM"
+      },
+      {
+        "id": "W4aqjp9seeU",
+        "title": "【ストリートファイター6】夜にやることと言えば…【 ぶいすぽっ！ / 千燈ゆうひ 】",
+        "platform": "youtube",
+        "date": "2026-10-03 22:19",
+        "duration": "2h 30m",
+        "viewCount": "14.6万回",
+        "game": "Street Fighter 6",
+        "thumbnail": "https://i.ytimg.com/vi/W4aqjp9seeU/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=W4aqjp9seeU"
+      },
+      {
+        "id": "WyqtXFygJAU",
+        "title": "【League of Legends】ふぁ～みんなでランク w/神楽めあ,Ceros,たかやスペシャル,Evi【 ぶいすぽっ！ / 千燈ゆうひ 】",
+        "platform": "youtube",
+        "date": "2026-10-02 21:59",
+        "duration": "2h 30m",
+        "viewCount": "10.3万回",
+        "game": "League of Legends",
+        "thumbnail": "https://i.ytimg.com/vi/WyqtXFygJAU/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=WyqtXFygJAU"
+      },
+      {
+        "id": "13t3paOpiAg",
+        "title": "【ドラゴンクエストVII Reimagined】これ毒かも！？ #10【 ぶいすぽっ！ / 千燈ゆうひ 】",
+        "platform": "youtube",
+        "date": "2026-10-01 22:45",
+        "duration": "2h 30m",
+        "viewCount": "6.5万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/13t3paOpiAg/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=13t3paOpiAg"
+      },
+      {
+        "id": "0Ho7776VVe8",
+        "title": "【Teamfight Tactics】たぬファイ本番！！千燈組の頭として──【 ぶいすぽっ！ / 千燈ゆうひ 】",
+        "platform": "youtube",
+        "date": "2026-09-30 18:00",
+        "duration": "2h 30m",
+        "viewCount": "9.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/0Ho7776VVe8/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=0Ho7776VVe8"
       }
     ],
     "fanMark": "🫠"
@@ -1354,15 +1981,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "PBusqknKaAQ",
-        "title": "【初配信】はじめまして☆蝶屋はなびデス！！！！！【 ぶいすぽっ！ /蝶屋はなび 】",
+        "id": "sy-yMvD2g9Y",
+        "title": "【ストリートファイターリーグ JAPAN 2026】　Div.F 第3節ミラー配信！！！！！！　【 ぶいすぽっ！ ⁠/蝶屋はなび 】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/PBusqknKaAQ/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=PBusqknKaAQ"
+        "date": "2026-10-06 18:40",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "Street Fighter 6",
+        "thumbnail": "https://i.ytimg.com/vi/sy-yMvD2g9Y/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=sy-yMvD2g9Y"
+      },
+      {
+        "id": "gCQ46NuwtEY",
+        "title": "【 PUBG 】　ドン勝？ってやつきになってます！！！！！！！！！！w/ミミ先輩、きゅぴちゃま、れん先輩　【 ぶいすぽっ！ ⁠/蝶屋はなび 】",
+        "platform": "youtube",
+        "date": "2026-10-05 17:59",
+        "duration": "2h 30m",
+        "viewCount": "6.9万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/gCQ46NuwtEY/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=gCQ46NuwtEY"
+      },
+      {
+        "id": "k28L2ocGeG4",
+        "title": "【 PUBG 】　やる気あります！！！！！！！！！！w/ミミ先輩、きゅぴちゃま、エマ先輩　【 ぶいすぽっ！ ⁠/蝶屋はなび 】",
+        "platform": "youtube",
+        "date": "2026-10-04 22:02",
+        "duration": "2h 30m",
+        "viewCount": "5.0万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/k28L2ocGeG4/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=k28L2ocGeG4"
+      },
+      {
+        "id": "K7ogxc8fXOE",
+        "title": "【スト６】　グラマス目指して！！！！！！！！！！！　【 ぶいすぽっ！ ⁠/蝶屋はなび 】",
+        "platform": "youtube",
+        "date": "2026-10-03 12:31",
+        "duration": "2h 30m",
+        "viewCount": "5.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/K7ogxc8fXOE/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=K7ogxc8fXOE"
+      },
+      {
+        "id": "USjeBkXBpRo",
+        "title": "#3【 鬼武者 Way of the Sword 】　五輪書はもったか？？？？！！！！！！！　【 ぶいすぽっ！ ⁠/蝶屋はなび 】",
+        "platform": "youtube",
+        "date": "2026-10-02 18:42",
+        "duration": "2h 30m",
+        "viewCount": "5.5万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/USjeBkXBpRo/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=USjeBkXBpRo"
       }
     ],
     "fanMark": "🦋🎆"
@@ -1404,26 +2075,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "k5Nl_YyR_3k",
-        "title": "【スト6】おんぶにだっこ！！PC Watch杯ストリートファイター6 デュオ祭り【 ぶいすぽっ！甘結もか 】",
-        "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "Street Fighter 6",
-        "thumbnail": "https://i.ytimg.com/vi/k5Nl_YyR_3k/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=k5Nl_YyR_3k"
-      },
-      {
-        "id": "F01yS5x5l74",
+        "id": "FGAYgE--4pQ",
         "title": "【スト6】だいぶまったりします【 ぶいすぽっ！甘結もか 】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
+        "date": "2026-10-05 17:22",
+        "duration": "2h 30m",
+        "viewCount": "11.2万回",
         "game": "Street Fighter 6",
-        "thumbnail": "https://i.ytimg.com/vi/F01yS5x5l74/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=F01yS5x5l74"
+        "thumbnail": "https://i.ytimg.com/vi/FGAYgE--4pQ/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=FGAYgE--4pQ"
+      },
+      {
+        "id": "KnjRr-o-7jc",
+        "title": "【スト6】おんぶにだっこ！！PC Watch杯ストリートファイター6 デュオ祭り/KEI.Bさんと【 ぶいすぽっ！甘結もか 】",
+        "platform": "youtube",
+        "date": "2026-10-03 14:35",
+        "duration": "2h 30m",
+        "viewCount": "15.7万回",
+        "game": "Street Fighter 6",
+        "thumbnail": "https://i.ytimg.com/vi/KnjRr-o-7jc/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=KnjRr-o-7jc"
+      },
+      {
+        "id": "v2RDdRWhnh4",
+        "title": "【APEX】スト6コラボあるんだよね！？【 ぶいすぽっ！甘結もか 】",
+        "platform": "youtube",
+        "date": "2026-10-01 09:34",
+        "duration": "2h 30m",
+        "viewCount": "12.2万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/v2RDdRWhnh4/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=v2RDdRWhnh4"
+      },
+      {
+        "id": "j5nhdK7f-Y4",
+        "title": "【トルネコの大冒険 不思議のダンジョン　ちょっとステキなリマスター】１クレ、いいですか？　ネタバレ注意【 ぶいすぽっ！甘結もか 】",
+        "platform": "youtube",
+        "date": "2026-09-28 03:24",
+        "duration": "2h 30m",
+        "viewCount": "13.1万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/j5nhdK7f-Y4/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=j5nhdK7f-Y4"
+      },
+      {
+        "id": "c_ywmxHrzQ4",
+        "title": "【スト6】サガットを思い出す・・・！伸ばす・・・！【 ぶいすぽっ！甘結もか 】",
+        "platform": "youtube",
+        "date": "2026-09-25 22:50",
+        "duration": "2h 30m",
+        "viewCount": "10.2万回",
+        "game": "Street Fighter 6",
+        "thumbnail": "https://i.ytimg.com/vi/c_ywmxHrzQ4/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=c_ywmxHrzQ4"
       }
     ],
     "fanMark": "🕹️🔖"
@@ -1465,15 +2169,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "QrgLUh_E_xQ",
-        "title": "【初配信】デビューさせていただきます。銀城サイネです！【 #ぶいすぽ新メンバー ⁠#銀城サイネ初配信 】",
+        "id": "oS8P2ViIC_I",
+        "title": "【スト6】寝れなかったからハンバーグ食べた【ぶいすぽっ！ #銀城サイネ 】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/QrgLUh_E_xQ/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=QrgLUh_E_xQ"
+        "date": "2026-10-06 09:02",
+        "duration": "2h 30m",
+        "viewCount": "7.0万回",
+        "game": "Street Fighter 6",
+        "thumbnail": "https://i.ytimg.com/vi/oS8P2ViIC_I/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=oS8P2ViIC_I"
+      },
+      {
+        "id": "x9FF1drbEAk",
+        "title": "【雑談】占いにいった話とか【ぶいすぽっ！ #銀城サイネ 】",
+        "platform": "youtube",
+        "date": "2026-10-05 06:16",
+        "duration": "2h 30m",
+        "viewCount": "4.1万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/x9FF1drbEAk/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=x9FF1drbEAk"
+      },
+      {
+        "id": "1lqzClwBVok",
+        "title": "【メン限】『プロジェクト・ヘイル・メアリー』を観たいのです！【ぶいすぽっ！ #銀城サイネ 】",
+        "platform": "youtube",
+        "date": "2026-10-04 22:15",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/1lqzClwBVok/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=1lqzClwBVok"
+      },
+      {
+        "id": "E3C7fTCuHlA",
+        "title": "【スト6】フレームフレームフレーム重ね重ね重ね【ぶいすぽっ！ #銀城サイネ 】",
+        "platform": "youtube",
+        "date": "2026-10-03 17:01",
+        "duration": "2h 30m",
+        "viewCount": "7.8万回",
+        "game": "Street Fighter 6",
+        "thumbnail": "https://i.ytimg.com/vi/E3C7fTCuHlA/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=E3C7fTCuHlA"
+      },
+      {
+        "id": "qhUkaGYf53o",
+        "title": "【スト6】諦めたらそこで試合終了ですよ【ぶいすぽっ！ #銀城サイネ 】",
+        "platform": "youtube",
+        "date": "2026-10-01 13:00",
+        "duration": "2h 30m",
+        "viewCount": "5.8万回",
+        "game": "Street Fighter 6",
+        "thumbnail": "https://i.ytimg.com/vi/qhUkaGYf53o/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=qhUkaGYf53o"
       }
     ],
     "fanMark": "🎈"
@@ -1515,15 +2263,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "wGGmQ-dLQZ8",
-        "title": "◤ 初配信 ◢ はじめまして！龍巻ちせです！ ◤ぶいすぽ新メンバー 龍巻ちせ ◢",
+        "id": "OPqkSOcjtS8",
+        "title": "◤  PUBG: BATTLEGROUNDS  ◢　ご一緒にやらせていただきます！！  ◤ぶいすぽっ！ #龍巻ちせ ⁠◢",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/wGGmQ-dLQZ8/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=wGGmQ-dLQZ8"
+        "date": "2026-10-06 14:05",
+        "duration": "2h 30m",
+        "viewCount": "0.3万回",
+        "game": "PUBG",
+        "thumbnail": "https://i.ytimg.com/vi/OPqkSOcjtS8/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=OPqkSOcjtS8"
+      },
+      {
+        "id": "rdL57MzJgvE",
+        "title": "◤  雑談  ◢　寝る前にちょっとお絵かき  ◤ぶいすぽっ！ #龍巻ちせ ⁠◢",
+        "platform": "youtube",
+        "date": "2026-10-04 22:31",
+        "duration": "2h 30m",
+        "viewCount": "9.3万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/rdL57MzJgvE/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=rdL57MzJgvE"
+      },
+      {
+        "id": "gVvPkRS1hN8",
+        "title": "◤  League of Legends  ◢　rank5v5一緒にいかせていただきます！   ◤ぶいすぽっ！ #龍巻ちせ ⁠◢",
+        "platform": "youtube",
+        "date": "2026-10-03 20:02",
+        "duration": "2h 30m",
+        "viewCount": "8.4万回",
+        "game": "League of Legends",
+        "thumbnail": "https://i.ytimg.com/vi/gVvPkRS1hN8/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=gVvPkRS1hN8"
+      },
+      {
+        "id": "yUlbssTUCM0",
+        "title": "◤  League of Legends  ◢　ちょっと久しぶりソロランク   ◤ぶいすぽっ！ #龍巻ちせ ⁠◢",
+        "platform": "youtube",
+        "date": "2026-10-02 16:32",
+        "duration": "2h 30m",
+        "viewCount": "7.3万回",
+        "game": "League of Legends",
+        "thumbnail": "https://i.ytimg.com/vi/yUlbssTUCM0/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=yUlbssTUCM0"
+      },
+      {
+        "id": "hTusd0zlUmg",
+        "title": "◤  Teamfight Tactics  ◢　たぬファイDチーム本番！   ◤ぶいすぽっ！ #龍巻ちせ ⁠◢",
+        "platform": "youtube",
+        "date": "2026-09-30 18:00",
+        "duration": "2h 30m",
+        "viewCount": "8.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/hTusd0zlUmg/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=hTusd0zlUmg"
       }
     ],
     "fanMark": "🐉🌪️"
@@ -1565,26 +2357,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "hg8kVriK77M",
-        "title": "【DEBUT STREAM】Hi, I am Remia Aotsuki! Nice to meet you! 【#VSPOEN #RemiaAotsuki】",
+        "id": "s9USJXrDHM8",
+        "title": "【Nexon Maplestory: Classic World】 Getting a j*b and questing... 【#VSPOEN #RemiaAotsuki】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/hg8kVriK77M/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=hg8kVriK77M"
+        "date": "2026-10-07 22:00",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "MapleStory",
+        "thumbnail": "https://i.ytimg.com/vi/s9USJXrDHM8/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=s9USJXrDHM8"
       },
       {
-        "id": "S38iN1qT-XU",
-        "title": "【Debut 2.0】Let’s get to know each other! 【#VSPOEN #RemiaAotsuki】",
+        "id": "7xqXnDPwsOk",
+        "title": "【Nexon Maplestory: Classic World】 Starting our new adventure! 【#VSPOEN #RemiaAotsuki】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "雑談",
-        "thumbnail": "https://i.ytimg.com/vi/S38iN1qT-XU/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=S38iN1qT-XU"
+        "date": "2026-10-07 03:00",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "MapleStory",
+        "thumbnail": "https://i.ytimg.com/vi/7xqXnDPwsOk/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=7xqXnDPwsOk"
+      },
+      {
+        "id": "2892540423",
+        "title": "eggless 21K Premier noob",
+        "platform": "twitch",
+        "date": "2026-10-05 22:08",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/75f0d7dbf7929da2b16b_remiaaotsuki_316084920274_1791205686//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2892540423"
+      },
+      {
+        "id": "jcRQ-v3F0JI",
+        "title": "【Counter-Strike 2】   Eggless 🪺 and 21K 💩 |  Premier  【#VSPOEN #RemiaAotsuki】",
+        "platform": "youtube",
+        "date": "2026-10-05 22:07",
+        "duration": "2h 30m",
+        "viewCount": "0.8万回",
+        "game": "Counter-Strike 2",
+        "thumbnail": "https://i.ytimg.com/vi/jcRQ-v3F0JI/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=jcRQ-v3F0JI"
+      },
+      {
+        "id": "2891719282",
+        "title": "scary gorey party \\u003e\\u003c",
+        "platform": "twitch",
+        "date": "2026-10-04 23:05",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/dgeft87wbj63p/333fd96abbe1003270b1_remiaaotsuki_316108453331_1791122720//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2891719282"
       }
     ],
     "fanMark": "🔋🔭"
@@ -1626,15 +2451,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "Uta4ladnvXU",
-        "title": "【DEBUT】Don't get too excited !!【#VSPOEN #AryaKuroha】",
+        "id": "mNIGaeQd564",
+        "title": "【WUTHERING WAVES】WHO IS HSIN AND WHY DOES SHE MAKE ME FEEL THINGS ?!【#VSPOEN #AryaKuroha】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/Uta4ladnvXU/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=Uta4ladnvXU"
+        "date": "2026-10-07 07:00",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "Wuthering Waves",
+        "thumbnail": "https://i.ytimg.com/vi/mNIGaeQd564/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=mNIGaeQd564"
+      },
+      {
+        "id": "C0hR8exM0sQ",
+        "title": "【MINECRAFT】zoo building pt. 2 !!!【#VSPOEN #AryaKuroha】",
+        "platform": "youtube",
+        "date": "2026-10-05 08:01",
+        "duration": "2h 30m",
+        "viewCount": "1.0万回",
+        "game": "Minecraft",
+        "thumbnail": "https://i.ytimg.com/vi/C0hR8exM0sQ/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=C0hR8exM0sQ"
+      },
+      {
+        "id": "2892145656",
+        "title": "✦ chill zoo building !",
+        "platform": "twitch",
+        "date": "2026-10-05 08:01",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://static-cdn.jtvnw.net/cf_vods/d1m7jfoe9zdc1j/d45152346773abdd0053_aryakuroha_321667724505_1791154854//thumb/thumb0-640x360.jpg",
+        "url": "https://www.twitch.tv/videos/2892145656"
+      },
+      {
+        "id": "28q24mbudCo",
+        "title": "【MINECRAFT】zoo building !! (for real this time)【#VSPOEN #AryaKuroha】",
+        "platform": "youtube",
+        "date": "2026-10-04 07:01",
+        "duration": "2h 30m",
+        "viewCount": "1.5万回",
+        "game": "Minecraft",
+        "thumbnail": "https://i.ytimg.com/vi/28q24mbudCo/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=28q24mbudCo"
+      },
+      {
+        "id": "5SarhnVfy3g",
+        "title": "【MINECRAFT】muted zoo building !!【#VSPOEN #AryaKuroha】",
+        "platform": "youtube",
+        "date": "2026-10-01 05:26",
+        "duration": "2h 30m",
+        "viewCount": "0.8万回",
+        "game": "Minecraft",
+        "thumbnail": "https://i.ytimg.com/vi/5SarhnVfy3g/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=5SarhnVfy3g"
       }
     ],
     "fanMark": "♢️🔪"
@@ -1676,15 +2545,37 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "fOmtSrZV-H0",
-        "title": "【DEBUT】 kaiju meta 【#VSPOEN #JiraJisaki】",
+        "id": "X0kO1RWaef0",
+        "title": "【Machine Party】i've played these games BEFORE【#VSPOEN #JiraJisaki】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/fOmtSrZV-H0/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=fOmtSrZV-H0"
+        "date": "2026-10-02 22:59",
+        "duration": "2h 30m",
+        "viewCount": "0.6万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/X0kO1RWaef0/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=X0kO1RWaef0"
+      },
+      {
+        "id": "PxbKX7vB7yk",
+        "title": "【Minecraft】추석 마크!! w. hebi【#VSPOEN #JiraJisaki】",
+        "platform": "youtube",
+        "date": "2026-09-25 17:12",
+        "duration": "2h 30m",
+        "viewCount": "0.8万回",
+        "game": "Minecraft",
+        "thumbnail": "https://i.ytimg.com/vi/PxbKX7vB7yk/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=PxbKX7vB7yk"
+      },
+      {
+        "id": "UTD1eqEo_Ac",
+        "title": "【ZATSU】tadaima!! japan yap!!【#VSPOEN #JiraJisaki】",
+        "platform": "youtube",
+        "date": "2026-09-25 12:01",
+        "duration": "2h 30m",
+        "viewCount": "0.6万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/UTD1eqEo_Ac/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=UTD1eqEo_Ac"
       }
     ],
     "fanMark": "⛰️"
@@ -1787,26 +2678,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "p1AWYGDFcJk",
-        "title": "【DEBUT】Blast off into space! Hello earthlings! 【#VSPOEN #RikoSolari】",
+        "id": "xhEwO5BZu0I",
+        "title": "【MACHINE PARTY】Last man standing.【#VSPOEN #RikoSolari】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/p1AWYGDFcJk/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=p1AWYGDFcJk"
+        "date": "2026-10-02 23:00",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/xhEwO5BZu0I/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=xhEwO5BZu0I"
       },
       {
-        "id": "AjTJVy_5IuU",
-        "title": "【VSPO! EN】Debut Animation PV【Narin Mikure/Riko Solari】",
+        "id": "2HfIsWWBBMg",
+        "title": "【DRESSMAKER】Fashionista coming through!【#VSPOEN #RikoSolari】",
         "platform": "youtube",
-        "date": "2026-10-04 20:00",
-        "duration": "3h 30m",
-        "viewCount": "18.5万回",
-        "game": "アニメーションPV",
-        "thumbnail": "https://i.ytimg.com/vi/AjTJVy_5IuU/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=AjTJVy_5IuU"
+        "date": "2026-10-01 22:00",
+        "duration": "2h 30m",
+        "viewCount": "1.1万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/2HfIsWWBBMg/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=2HfIsWWBBMg"
+      },
+      {
+        "id": "y2ihvdFoysw",
+        "title": "【BOMBANANA!】FRENCH, KOREAN AND TAGALOG???【#VSPOEN #RikoSolari】",
+        "platform": "youtube",
+        "date": "2026-09-30 22:03",
+        "duration": "2h 30m",
+        "viewCount": "1.5万回",
+        "game": "BOMBANANA!",
+        "thumbnail": "https://i.ytimg.com/vi/y2ihvdFoysw/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=y2ihvdFoysw"
+      },
+      {
+        "id": "JinUiUDk7IA",
+        "title": "【APEX LEGENDS】ぶいすぽフルパ！！【#VSPOEN #RikoSolari】",
+        "platform": "youtube",
+        "date": "2026-09-29 20:10",
+        "duration": "2h 30m",
+        "viewCount": "3.1万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/JinUiUDk7IA/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=JinUiUDk7IA"
+      },
+      {
+        "id": "giumS9mdxpQ",
+        "title": "【OVERWATCH】chill(?) sunday rankge【#VSPOEN #RikoSolari】",
+        "platform": "youtube",
+        "date": "2026-09-27 22:01",
+        "duration": "2h 30m",
+        "viewCount": "1.0万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/giumS9mdxpQ/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=giumS9mdxpQ"
       }
     ],
     "fanMark": "👩‍🚀💜"
@@ -1848,15 +2772,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "5Bx6FxWPHe4",
-        "title": "【DEBUT STREAM】Welcome to my world! 【#VSPOEN #ErisSuzukami】",
+        "id": "Faxy8ZC8TAg",
+        "title": "【VALORANT】水縹杯 !!! 頑張ろう !!! TEAM 2 POV 【#VSPOEN #ErisSuzukami 】",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/5Bx6FxWPHe4/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=5Bx6FxWPHe4"
+        "date": "2026-10-03 13:05",
+        "duration": "2h 30m",
+        "viewCount": "1.4万回",
+        "game": "VALORANT",
+        "thumbnail": "https://i.ytimg.com/vi/Faxy8ZC8TAg/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Faxy8ZC8TAg"
+      },
+      {
+        "id": "WPfZBQsAiNs",
+        "title": "【VALORANT】 team jade* vs team blank (shivershiver) 【#VSPOEN #ErisSuzukami 】",
+        "platform": "youtube",
+        "date": "2026-10-01 15:17",
+        "duration": "2h 30m",
+        "viewCount": "2.4万回",
+        "game": "VALORANT",
+        "thumbnail": "https://i.ytimg.com/vi/WPfZBQsAiNs/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=WPfZBQsAiNs"
+      },
+      {
+        "id": "cmIGowKk_U8",
+        "title": "【BOMBANANA!】 united nations but vtuber【#VSPOEN #ErisSuzukami 】",
+        "platform": "youtube",
+        "date": "2026-09-30 22:03",
+        "duration": "2h 30m",
+        "viewCount": "0.8万回",
+        "game": "BOMBANANA!",
+        "thumbnail": "https://i.ytimg.com/vi/cmIGowKk_U8/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=cmIGowKk_U8"
+      },
+      {
+        "id": "RuG-64He1Qk",
+        "title": "【PEAK】 w/ juno, pan, rpr【#VSPOEN #ErisSuzukami 】",
+        "platform": "youtube",
+        "date": "2026-09-29 22:04",
+        "duration": "2h 30m",
+        "viewCount": "0.8万回",
+        "game": "ゲーム実況",
+        "thumbnail": "https://i.ytimg.com/vi/RuG-64He1Qk/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=RuG-64He1Qk"
+      },
+      {
+        "id": "tyoZErXQ_xY",
+        "title": "【zatsudan/雑談】 new 'motes reveal !!! + free chat 【#VSPOEN #ErisSuzukami 】",
+        "platform": "youtube",
+        "date": "2026-09-25 10:58",
+        "duration": "2h 30m",
+        "viewCount": "0.9万回",
+        "game": "雑談",
+        "thumbnail": "https://i.ytimg.com/vi/tyoZErXQ_xY/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=tyoZErXQ_xY"
       }
     ],
     "fanMark": "🎣☁️"
@@ -1898,15 +2866,59 @@ export const MEMBERS = [
     },
     "past5Streams": [
       {
-        "id": "J955HDmnWjg",
-        "title": "【DEBUT STREAM】Sweet chaos starts now! 【#VSPOEN #JunoUmezono】",
+        "id": "hJIcH9CqGRI",
+        "title": "◤Wuthering Waves 3.7◢ HSIN SHOWCASE + HOLOGRAM CHALLENGES | #JunoUmezono #VSPOEN",
         "platform": "youtube",
-        "date": "2026-10-05 20:00",
-        "duration": "3h 30m",
-        "viewCount": "15.0万回",
-        "game": "初配信",
-        "thumbnail": "https://i.ytimg.com/vi/J955HDmnWjg/hqdefault.jpg",
-        "url": "https://www.youtube.com/watch?v=J955HDmnWjg"
+        "date": "2026-10-06 23:00",
+        "duration": "2h 30m",
+        "viewCount": "1.2万回",
+        "game": "Wuthering Waves",
+        "thumbnail": "https://i.ytimg.com/vi/hJIcH9CqGRI/hqdefault_live.jpg",
+        "url": "https://www.youtube.com/watch?v=hJIcH9CqGRI"
+      },
+      {
+        "id": "wNO0Lb69gHE",
+        "title": "◤Wuthering Waves 3.1 part 2◢ finishing segue + EXPLORING lahai roi ! | #JunoUmezono #VSPOEN",
+        "platform": "youtube",
+        "date": "2026-10-05 23:12",
+        "duration": "2h 30m",
+        "viewCount": "3.4万回",
+        "game": "Wuthering Waves",
+        "thumbnail": "https://i.ytimg.com/vi/wNO0Lb69gHE/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=wNO0Lb69gHE"
+      },
+      {
+        "id": "Ks03gaCpopA",
+        "title": "◤Wuthering Waves 3.1 part 1◢ GUNDAM WAIFU? FINALLY STARTING 3.1 !!! | #JunoUmezono #VSPOEN",
+        "platform": "youtube",
+        "date": "2026-10-04 23:01",
+        "duration": "2h 30m",
+        "viewCount": "6.8万回",
+        "game": "Wuthering Waves",
+        "thumbnail": "https://i.ytimg.com/vi/Ks03gaCpopA/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Ks03gaCpopA"
+      },
+      {
+        "id": "LySUz97a12A",
+        "title": "◤40K CELEBRATION◢ APEX, LEAGUE, \\u0026 VALORANT w/ VIEWERS ! | #JunoUmezono #VSPOEN",
+        "platform": "youtube",
+        "date": "2026-10-03 22:59",
+        "duration": "2h 30m",
+        "viewCount": "1.7万回",
+        "game": "Apex Legends",
+        "thumbnail": "https://i.ytimg.com/vi/LySUz97a12A/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=LySUz97a12A"
+      },
+      {
+        "id": "j4Fzq_DBITk",
+        "title": "◤Bombanana◢ A FILIPINO, KOREAN, AND FRENCH WALK INTO A BAR.. | #JunoUmezono #VSPOEN",
+        "platform": "youtube",
+        "date": "2026-09-30 22:01",
+        "duration": "2h 30m",
+        "viewCount": "1.3万回",
+        "game": "BOMBANANA!",
+        "thumbnail": "https://i.ytimg.com/vi/j4Fzq_DBITk/hqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=j4Fzq_DBITk"
       }
     ],
     "fanMark": "😈🍬"

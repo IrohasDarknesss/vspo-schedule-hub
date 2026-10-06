@@ -58,8 +58,20 @@ export function evaluateStreamRealtime(stream) {
     startsIn = `${stream.date.slice(5)} ${stream.time}`;
   } else {
     // Today! Evaluate by time of day
-    if (currentMinutes < streamStartMinutes - 15) {
-      // More than 15 mins before start
+    if (stream.status === 'live') {
+      computedStatus = 'live';
+      const elapsedMins = Math.max(0, currentMinutes - streamStartMinutes);
+      if (elapsedMins < 60) {
+        elapsed = `${elapsedMins}分経過`;
+      } else {
+        const h = Math.floor(elapsedMins / 60);
+        const m = elapsedMins % 60;
+        elapsed = m > 0 ? `${h}時間${m}分経過` : `${h}時間経過`;
+      }
+    } else if (stream.status === 'ended') {
+      computedStatus = 'ended';
+    } else if (currentMinutes < streamStartMinutes - 5) {
+      // Before start
       computedStatus = 'upcoming';
       const diffMins = streamStartMinutes - currentMinutes;
       if (diffMins < 60) {
@@ -69,8 +81,8 @@ export function evaluateStreamRealtime(stream) {
         const mins = diffMins % 60;
         startsIn = mins > 0 ? `あと${hours}時間${mins}分` : `あと${hours}時間`;
       }
-    } else if (currentMinutes >= streamStartMinutes - 15 && currentMinutes < streamEndMinutes) {
-      // Currently live! (from 15 min pre-roll until expected duration)
+    } else if (currentMinutes >= streamStartMinutes - 5 && currentMinutes < streamEndMinutes) {
+      // Started / Live window
       computedStatus = 'live';
       const elapsedMins = Math.max(0, currentMinutes - streamStartMinutes);
       if (elapsedMins < 60) {
@@ -81,7 +93,6 @@ export function evaluateStreamRealtime(stream) {
         elapsed = m > 0 ? `${h}時間${m}分経過` : `${h}時間経過`;
       }
     } else {
-      // Finished today
       computedStatus = 'ended';
     }
   }
