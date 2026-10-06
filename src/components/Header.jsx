@@ -263,8 +263,8 @@ export default function Header({
               >
                 <MessageSquare className="w-3.5 h-3.5" />
                 <span>ファン掲示板</span>
-                <span className="bg-purple-500/20 text-purple-300 text-[9px] font-black px-1.5 rounded-full border border-purple-500/40">
-                  NEW
+                <span className="bg-amber-500/20 text-amber-300 text-[9px] font-black px-1.5 rounded-full border border-amber-500/40 font-gaming">
+                  SOON
                 </span>
               </button>
             </div>
