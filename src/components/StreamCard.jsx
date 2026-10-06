@@ -41,8 +41,13 @@ export default function StreamCard({
           loading="lazy"
           onError={(e) => {
             e.currentTarget.onerror = null;
-            e.currentTarget.src = member.branch === 'EN' ? '/logos/vspo-en.png' : '/logos/vspo-jp.png';
-            e.currentTarget.className = 'w-full h-full object-contain p-8 bg-[#111724]';
+            if (member && (member.visual || member.avatar)) {
+              e.currentTarget.src = member.visual || member.avatar;
+              e.currentTarget.className = 'w-full h-full object-cover object-top filter brightness-90 bg-[#101726]';
+            } else {
+              e.currentTarget.src = member?.branch === 'EN' ? '/logos/vspo-en.png' : '/logos/vspo-jp.png';
+              e.currentTarget.className = 'w-full h-full object-contain p-8 bg-[#111724]';
+            }
           }}
         />
         

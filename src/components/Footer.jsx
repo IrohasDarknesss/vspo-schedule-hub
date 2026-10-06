@@ -14,12 +14,12 @@ export default function Footer({ onOpenAdmin }) {
           <div className="flex items-center gap-2 mb-2">
             <span className="font-gaming font-black text-lg text-white">VSPO!</span>
             <span className="font-gaming font-bold text-lg text-[#FF4687]">SCHEDULE</span>
-            <span className="text-[10px] bg-[#162133] text-slate-300 px-2 py-0.5 rounded border border-slate-700/60">
+            <span className="text-[10px] bg-[#162133] text-slate-300 px-2.5 py-0.5 rounded-full border border-slate-700/60 whitespace-nowrap">
               ぶいすぽジュール
             </span>
           </div>
           <p className="text-slate-400 max-w-md leading-relaxed text-[11px]">
-            本サイトは「ぶいすぽっ！(Virtual eSports Project)」および「VSPO! EN」ファンのための非公式総合スケジュール＆アーカイブまとめツールです。
+            本サイトは「ぶいすぽっ！(Virtual eSports Project)」および「VSPO! EN」ファンのための総合スケジュール＆アーカイブまとめツールです。
           </p>
         </div>
 

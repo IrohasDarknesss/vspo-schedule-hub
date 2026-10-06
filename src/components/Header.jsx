@@ -130,11 +130,11 @@ export default function Header({
               />
               <div className="hidden sm:block h-7 w-[1px] bg-slate-800" />
               <div>
-                <div className="flex items-center gap-2">
-                  <h1 className="text-xl sm:text-2xl font-black tracking-wider text-white font-gaming flex items-center gap-1">
-                    <span className="text-white">SCHEDULE</span>
+                <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+                  <h1 className="text-xl sm:text-2xl font-black tracking-wider text-white font-gaming">
+                    SCHEDULE
                   </h1>
-                  <span className="bg-gradient-to-r from-[#FF4687]/20 to-[#00F0FF]/20 text-[#FF4687] text-[11px] font-black px-2.5 py-0.5 rounded esports-clip-tag border border-[#FF4687]/40">
+                  <span className="whitespace-nowrap shrink-0 bg-gradient-to-r from-[#FF4687]/20 to-[#00F0FF]/20 text-[#FF4687] text-[11px] font-bold px-2.5 py-0.5 rounded-full border border-[#FF4687]/40 tracking-normal shadow-sm">
                     ぶいすぽジュール
                   </span>
                 </div>

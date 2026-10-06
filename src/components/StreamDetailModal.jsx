@@ -57,8 +57,13 @@ export default function StreamDetailModal({
             className="w-full h-full object-cover" 
             onError={(e) => {
               e.currentTarget.onerror = null;
-              e.currentTarget.src = member?.branch === 'EN' ? '/logos/vspo-en.png' : '/logos/vspo-jp.png';
-              e.currentTarget.className = 'w-full h-full object-contain p-12 bg-[#111724]';
+              if (member && (member.visual || member.avatar)) {
+                e.currentTarget.src = member.visual || member.avatar;
+                e.currentTarget.className = 'w-full h-full object-cover object-top filter brightness-90 bg-[#101726]';
+              } else {
+                e.currentTarget.src = member?.branch === 'EN' ? '/logos/vspo-en.png' : '/logos/vspo-jp.png';
+                e.currentTarget.className = 'w-full h-full object-contain p-12 bg-[#111724]';
+              }
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0D131E] via-transparent to-black/30" />
