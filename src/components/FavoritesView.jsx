@@ -12,9 +12,17 @@ import {
   Check, 
   Search, 
   Filter, 
-  Sparkles,
-  Eye,
-  Trash2
+  Sparkles, 
+  Eye, 
+  Trash2,
+  Lock,
+  Rocket,
+  Bell,
+  Globe2,
+  Tv,
+  Smartphone,
+  ShieldCheck,
+  CheckCircle2
 } from 'lucide-react';
 import StreamCard from './StreamCard';
 
@@ -29,6 +37,22 @@ export default function FavoritesView({
   onSelectMember,
   onExploreTalents
 }) {
+  // Coming Soon Mode toggle (defaults to false for public release)
+  const [isAdminPreview, setIsAdminPreview] = useState(false);
+
+  // Interactive teaser states
+  const [cheerCount, setCheerCount] = useState(() => {
+    if (typeof window === 'undefined') return 942;
+    return parseInt(localStorage.getItem('vspo_favorites_cheers') || '942', 10);
+  });
+  const [hasCheered, setHasCheered] = useState(false);
+  const [notifyEmail, setNotifyEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return localStorage.getItem('vspo_favorites_subscribed') === 'true';
+  });
+
+  // Underlying management state
   const [showManageModal, setShowManageModal] = useState(false);
   const [searchMemberQuery, setSearchMemberQuery] = useState('');
   const [manageBranchFilter, setManageBranchFilter] = useState('ALL');
@@ -36,11 +60,9 @@ export default function FavoritesView({
   const favoriteMembers = members.filter(m => favorites.includes(m.id));
   const favoriteStreams = schedules.filter(s => favorites.includes(s.memberId));
 
-  // Count live streams among favorites
   const liveFavoriteStreams = favoriteStreams.filter(s => s.status === 'live');
   const upcomingFavoriteStreams = favoriteStreams.filter(s => s.status === 'upcoming');
 
-  // Filter members in the manage drawer
   const filteredAllMembers = members.filter(m => {
     if (manageBranchFilter !== 'ALL' && m.branch !== manageBranchFilter) return false;
     if (searchMemberQuery.trim() !== '') {
@@ -53,11 +75,247 @@ export default function FavoritesView({
     return true;
   });
 
+  const handleCheer = () => {
+    const next = cheerCount + 1;
+    setCheerCount(next);
+    setHasCheered(true);
+    localStorage.setItem('vspo_favorites_cheers', next.toString());
+    setTimeout(() => setHasCheered(false), 2500);
+  };
+
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    if (!notifyEmail || !notifyEmail.includes('@')) return;
+    setIsSubscribed(true);
+    localStorage.setItem('vspo_favorites_subscribed', 'true');
+  };
+
+  // ----------------------------------------------------
+  // PUBLIC MODE: COMING SOON TEASER VIEW
+  // ----------------------------------------------------
+  if (!isAdminPreview) {
+    return (
+      <div className="space-y-10 animate-fadeIn py-2">
+        {/* Admin Secret Preview Switch */}
+        <div className="flex justify-end items-center">
+          <button
+            onClick={() => setIsAdminPreview(true)}
+            className="inline-flex items-center gap-1.5 text-[11px] text-slate-500 hover:text-slate-300 bg-slate-900/60 hover:bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-800 transition-colors font-mono"
+            title="運営・開発確認用のプレビュー画面に切り替えます"
+          >
+            <Lock className="w-3 h-3 text-amber-500" />
+            <span>運営テストプレビューを開く</span>
+          </button>
+        </div>
+
+        {/* Hero Showcase Card */}
+        <div className="relative overflow-hidden rounded-3xl border border-amber-500/30 bg-gradient-to-br from-[#0E1524] via-[#161D32] to-[#24170E] p-8 sm:p-12 shadow-2xl text-center">
+          {/* Ambient Lighting & Glow */}
+          <div className="absolute inset-0 bg-cyber-grid opacity-30 pointer-events-none" />
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-b from-amber-500/25 to-[#00F0FF]/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 max-w-3xl mx-auto space-y-6">
+            {/* Status Badge */}
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-pink-500/20 border border-amber-500/40 px-4 py-1.5 rounded-full shadow-lg shadow-amber-950/40">
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping" />
+              <span className="text-xs font-black text-amber-300 font-gaming tracking-wider uppercase">
+                COMING SOON • GLOBAL CLOUD SYNC
+              </span>
+            </div>
+
+            {/* Main Title */}
+            <h1 className="text-3xl sm:text-5xl font-black text-white font-gaming tracking-wide leading-tight">
+              全世界対応 パーソナル推しポータル
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-300 to-[#00F0FF]">
+                MY FAVORITES & CLOUD SYNC
+              </span>
+            </h1>
+
+            {/* Exciting Subtitle */}
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
+              世界中（日本・英語圏・アジア・欧米）のファンの皆様に向けて、
+              PC・スマホ・タブレット間での<strong className="text-amber-300 font-bold ml-1">推し設定リアルタイムクラウド同期</strong>や
+              <strong className="text-cyan-300 font-bold ml-1">ゲリラ配信プッシュ通知</strong>を搭載した
+              次世代のお気に入りシステムを現在鋭意準備中です！
+            </p>
+
+            {/* Progress Bar */}
+            <div className="bg-[#0A101C]/80 p-4 rounded-2xl border border-slate-700/70 max-w-xl mx-auto space-y-2 backdrop-blur-md">
+              <div className="flex justify-between items-center text-xs font-bold font-gaming">
+                <span className="text-slate-300 flex items-center gap-1.5">
+                  <Rocket className="w-3.5 h-3.5 text-amber-400" />
+                  グローバル同期システム 開発進捗
+                </span>
+                <span className="text-amber-400 font-mono font-black text-sm">92% COMPLETED</span>
+              </div>
+              <div className="h-3 w-full bg-slate-800 rounded-full overflow-hidden p-0.5 border border-slate-700">
+                <div 
+                  className="h-full bg-gradient-to-r from-amber-400 via-orange-500 to-[#00F0FF] rounded-full transition-all duration-1000 shadow-glow-amber"
+                  style={{ width: '92%' }}
+                />
+              </div>
+              <p className="text-[11px] text-slate-400 text-left">
+                ※ 世界各国のタイムゾーン自動追従およびクロスデバイス同期APIの最終負荷検証を実施しています。
+              </p>
+            </div>
+
+            {/* Cheer Button */}
+            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button
+                onClick={handleCheer}
+                className="relative group bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-black text-sm px-7 py-3 rounded-2xl shadow-xl shadow-amber-950/60 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2.5"
+              >
+                <Heart className={`w-5 h-5 fill-slate-950 transition-transform ${hasCheered ? 'scale-150 animate-bounce' : 'group-hover:scale-125'}`} />
+                <span>推しポータル公開を応援する！</span>
+                <span className="bg-slate-950/30 text-slate-950 px-2 py-0.5 rounded-full text-xs font-mono font-bold">
+                  {cheerCount.toLocaleString()}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* 4 Feature Cards Grid */}
+        <div className="space-y-4">
+          <div className="text-center space-y-1">
+            <h2 className="text-xl sm:text-2xl font-black text-white font-gaming tracking-wide flex items-center justify-center gap-2">
+              <Sparkles className="w-5 h-5 text-amber-400" />
+              <span>COMING SOON 4大主要機能</span>
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-400">
+              世界中のファンがストレスなく推し活を楽しめる機能がまもなく登場します
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            {/* Card 1 */}
+            <div className="bg-[#0E1524] rounded-2xl border border-slate-800 hover:border-amber-500/40 p-6 transition-all shadow-lg hover:shadow-amber-950/20 space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <Smartphone className="w-6 h-6" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                <span>端末間 クラウド推し同期</span>
+                <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full border border-amber-500/30">
+                  Cloud Sync
+                </span>
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                PCで登録した推しタレント設定が、スマホやタブレットでも自動で同期。面倒なアカウント登録不要で、URLシェアやワンタップQRコード同期にも対応します。
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-[#0E1524] rounded-2xl border border-slate-800 hover:border-pink-500/40 p-6 transition-all shadow-lg hover:shadow-pink-950/20 space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400">
+                <Bell className="w-6 h-6" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                <span>ゲリラ配信 リアルタイム通知</span>
+                <span className="text-[10px] bg-pink-500/20 text-pink-300 px-2 py-0.5 rounded-full border border-pink-500/30">
+                  Push Alerts
+                </span>
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                推しが突発配信やゲリラ配信を開始した瞬間、即座にブラウザ通知・Webプッシュでお知らせ。開始5分前のリマインダーで大切な瞬間を見逃しません。
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-[#0E1524] rounded-2xl border border-slate-800 hover:border-cyan-500/40 p-6 transition-all shadow-lg hover:shadow-cyan-950/20 space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-[#00F0FF]">
+                <Globe2 className="w-6 h-6" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                <span>全世界タイムゾーン＆多言語</span>
+                <span className="text-[10px] bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-500/30">
+                  Worldwide
+                </span>
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                JST（日本時間）に加え、北米（EST/PST）、欧州（CET/GMT）、アジア各国など現地時間へワンタップ切り替え。日英バイリンガルで世界中どこからでも快適に閲覧できます。
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-[#0E1524] rounded-2xl border border-slate-800 hover:border-purple-500/40 p-6 transition-all shadow-lg hover:shadow-purple-950/20 space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                <Tv className="w-6 h-6" />
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                <span>推し限定 マルチビューシアター</span>
+                <span className="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full border border-purple-500/30">
+                  Multi-View
+                </span>
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                大会本番やスクリム、大型コラボの際に、お気に入り登録したメンバーの視点だけを2画面・4画面で同時に再生できる専用カスタムビューアです。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Launch Notification Signup */}
+        <div className="bg-[#0B101C] rounded-2xl border border-slate-800 p-6 sm:p-8 max-w-xl mx-auto text-center space-y-4">
+          <div className="inline-flex p-3 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-1">
+            <Bell className="w-5 h-5" />
+          </div>
+          <h3 className="text-base sm:text-lg font-bold text-white font-gaming">
+            公開時に一番早く通知を受け取る
+          </h3>
+          <p className="text-xs text-slate-400 leading-relaxed">
+            機能の一般公開と同時にブラウザ通知または案内をお届けします（登録無料・いつでも解除可能）
+          </p>
+
+          {isSubscribed ? (
+            <div className="p-3 bg-emerald-950/40 border border-emerald-500/40 rounded-xl text-emerald-300 text-xs font-bold flex items-center justify-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <span>事前通知登録が完了しました！公開をお楽しみに。</span>
+            </div>
+          ) : (
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+              <input
+                type="email"
+                value={notifyEmail}
+                onChange={(e) => setNotifyEmail(e.target.value)}
+                placeholder="メールアドレスを入力..."
+                className="flex-1 bg-[#141C2B] border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+                required
+              />
+              <button
+                type="submit"
+                className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs px-5 py-2.5 rounded-xl transition-all shadow-md shrink-0"
+              >
+                登録する
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // ----------------------------------------------------
+  // ADMIN PREVIEW MODE: FULL FAVORITES MANAGEMENT
+  // ----------------------------------------------------
   return (
     <div className="space-y-8 animate-fadeIn">
+      {/* Admin Notice Bar */}
+      <div className="bg-amber-950/40 border border-amber-500/40 rounded-xl p-3 flex items-center justify-between text-xs text-amber-200">
+        <div className="flex items-center gap-2">
+          <Lock className="w-4 h-4 text-amber-400" />
+          <span className="font-bold">【運営テストプレビュー表示中】 現在一般ユーザーにはComing Soon画面が表示されています</span>
+        </div>
+        <button
+          onClick={() => setIsAdminPreview(false)}
+          className="text-xs bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 px-2.5 py-1 rounded-lg border border-amber-500/40 transition-colors font-bold"
+        >
+          Coming Soon表示に戻す
+        </button>
+      </div>
+
       {/* Header Bar with Stats & Quick Add Button */}
       <div className="bg-[#0E1522] rounded-2xl border border-slate-800 p-5 sm:p-6 shadow-xl relative overflow-hidden">
-        {/* Glow */}
         <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16" />
 
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-5">
@@ -78,7 +336,6 @@ export default function FavoritesView({
             </div>
           </div>
 
-          {/* Quick Action: Manage Favorites Drawer Button */}
           <div className="flex items-center gap-3">
             <button
               onClick={() => setShowManageModal(!showManageModal)}
@@ -100,342 +357,177 @@ export default function FavoritesView({
           </div>
 
           <div className="bg-[#141C2B] p-2.5 sm:p-3 rounded-xl border border-slate-700/60 text-center">
-            <span className="text-[11px] text-slate-400 block font-semibold">現在配信中</span>
-            <span className="text-lg sm:text-xl font-black text-red-400 font-mono flex items-center justify-center gap-1">
-              {liveFavoriteStreams.length > 0 && <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />}
-              {liveFavoriteStreams.length} 枠
+            <span className="text-[11px] text-slate-400 block font-semibold">現在LIVE中</span>
+            <span className="text-lg sm:text-xl font-black text-red-500 font-mono flex items-center justify-center gap-1">
+              {liveFavoriteStreams.length > 0 && <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />}
+              {liveFavoriteStreams.length} 件
             </span>
           </div>
 
           <div className="bg-[#141C2B] p-2.5 sm:p-3 rounded-xl border border-slate-700/60 text-center">
             <span className="text-[11px] text-slate-400 block font-semibold">今後の配信予定</span>
             <span className="text-lg sm:text-xl font-black text-[#00F0FF] font-mono">
-              {upcomingFavoriteStreams.length} 枠
+              {upcomingFavoriteStreams.length} 件
             </span>
           </div>
         </div>
       </div>
 
-      {/* Quick Add / Manage Modal or Drawer (Collapsible) */}
-      {showManageModal && (
-        <div className="bg-[#0D1420] rounded-2xl border-2 border-amber-500/50 p-5 shadow-2xl animate-fadeIn space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
-            <div>
-              <h3 className="text-sm font-black text-white font-gaming flex items-center gap-2">
-                <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-                <span>推しタレントの登録・一括管理</span>
-              </h3>
-              <p className="text-[11px] text-slate-400">
-                カードをクリックすると「★ 推し登録」をオン/オフできます（ブラウザに自動保存されます）。
-              </p>
-            </div>
-
-            {/* Filter buttons */}
-            <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1 bg-[#151E2E] p-1 rounded-lg border border-slate-700/60 text-xs">
-                <button
-                  onClick={() => setManageBranchFilter('ALL')}
-                  className={`px-2.5 py-1 rounded font-bold ${manageBranchFilter === 'ALL' ? 'bg-[#FF4687] text-white' : 'text-slate-400'}`}
-                >
-                  全員
-                </button>
-                <button
-                  onClick={() => setManageBranchFilter('JP')}
-                  className={`px-2.5 py-1 rounded font-bold ${manageBranchFilter === 'JP' ? 'bg-[#FF4687] text-white' : 'text-slate-400'}`}
-                >
-                  JP
-                </button>
-                <button
-                  onClick={() => setManageBranchFilter('EN')}
-                  className={`px-2.5 py-1 rounded font-bold ${manageBranchFilter === 'EN' ? 'bg-[#00F0FF] text-black' : 'text-[#00F0FF]'}`}
-                >
-                  EN
-                </button>
-              </div>
-
-              <button
-                onClick={() => setShowManageModal(false)}
-                className="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-lg font-bold"
-              >
-                閉じる
-              </button>
-            </div>
+      {/* Main Content */}
+      {favoriteMembers.length === 0 ? (
+        <div className="bg-[#0E1522] rounded-2xl border border-dashed border-slate-700 p-12 text-center space-y-4">
+          <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mx-auto text-amber-400">
+            <Star className="w-8 h-8" />
+          </div>
+          <h3 className="text-lg font-bold text-white font-gaming">まだ推しタレントが登録されていません</h3>
+          <p className="text-xs sm:text-sm text-slate-400 max-w-md mx-auto">
+            推しメンバーを登録すると、そのメンバーだけの配信タイムテーブルやLIVE情報がここに集約されます。
+          </p>
+          <div className="pt-2 flex justify-center gap-3">
+            <button
+              onClick={() => setShowManageModal(true)}
+              className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs px-5 py-2.5 rounded-xl transition-all shadow-md"
+            >
+              推しメンバーを選ぶ
+            </button>
+            <button
+              onClick={onExploreTalents}
+              className="bg-[#1E293B] hover:bg-slate-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all"
+            >
+              タレント名鑑を見る
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="space-y-6">
+          <div className="flex items-center justify-between">
+            <h3 className="text-base font-bold text-white flex items-center gap-2">
+              <Sparkles className="w-4 h-4 text-amber-400" />
+              <span>推しタレントの直近配信スケジュール</span>
+            </h3>
+            <span className="text-xs text-slate-400 font-mono">
+              全 {favoriteStreams.length} 件
+            </span>
           </div>
 
-          {/* Quick Selector Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2.5 max-h-72 overflow-y-auto p-1">
-            {filteredAllMembers.map(m => {
-              const isFav = favorites.includes(m.id);
-              return (
-                <button
-                  key={m.id}
-                  onClick={() => onToggleFavorite(m.id)}
-                  className={`p-2 rounded-xl border text-center transition-all flex flex-col items-center justify-between ${
-                    isFav
-                      ? 'bg-amber-500/15 border-amber-400 text-white shadow-md shadow-amber-950/40 ring-1 ring-amber-400/50'
-                      : 'bg-[#121A28] border-slate-800 text-slate-400 hover:border-slate-700 hover:text-white'
-                  }`}
-                >
-                  <div className="relative mb-1.5">
-                    <img 
-                      src={m.avatar} 
-                      alt={m.name}
-                      className="w-10 h-10 rounded-full object-cover object-[center_12%] bg-slate-900 ring-2 ring-[#0D131E]" 
-                    />
-                    <span className={`absolute -top-1 -right-1 p-0.5 rounded-full ${isFav ? 'bg-amber-400 text-slate-950' : 'bg-slate-800 text-slate-500'}`}>
-                      <Star className={`w-2.5 h-2.5 ${isFav ? 'fill-slate-950' : ''}`} />
-                    </span>
-                  </div>
-
-                  <span className="text-[11px] font-bold truncate max-w-full">
-                    {m.name}
-                  </span>
-                  <span className={`text-[9px] font-extrabold uppercase px-1 rounded mt-0.5 ${
-                    isFav ? 'text-amber-300 font-bold' : 'text-slate-500'
-                  }`}>
-                    {isFav ? '推し登録中' : '+ 追加'}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
+          {favoriteStreams.length === 0 ? (
+            <div className="bg-[#0E1522] rounded-2xl border border-slate-800 p-8 text-center text-slate-400 text-xs">
+              現在、登録した推しメンバーの配信予定はありません。
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {favoriteStreams.map(stream => {
+                const member = membersMap[stream.memberId];
+                if (!member) return null;
+                return (
+                  <StreamCard
+                    key={stream.id}
+                    stream={stream}
+                    member={member}
+                    timezone={timezone}
+                    isFavorite={true}
+                    onToggleFavorite={() => onToggleFavorite(member.id)}
+                    onSelectStream={() => onSelectStream(stream)}
+                    onSelectMember={() => onSelectMember(member)}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       )}
 
-      {/* Empty State when no favorites */}
-      {favoriteMembers.length === 0 ? (
-        <div className="bg-[#0E1522] rounded-2xl border border-slate-800 p-12 text-center my-6 max-w-2xl mx-auto shadow-xl">
-          <div className="w-16 h-16 mx-auto rounded-full bg-amber-400/10 flex items-center justify-center text-amber-400 mb-4 border border-amber-400/30">
-            <Star className="w-8 h-8 fill-amber-400" />
-          </div>
-          <h3 className="text-lg sm:text-xl font-black text-white mb-2 font-gaming">
-            推しメンバーがまだ登録されていません
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-400 mb-6 leading-relaxed">
-            上の「推しメンバーを追加・管理」ボタンや、各メンバー・配信カードの「★」マークをクリックすると、
-            推しメンバーとして保存されます。推しのスケジュールや直近アーカイブだけを快適に追うことができます！
-          </p>
-          <button
-            onClick={() => setShowManageModal(true)}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs sm:text-sm px-6 py-3 rounded-xl shadow-lg shadow-amber-950/50 transition-all hover:scale-105"
-          >
-            <Plus className="w-4 h-4" />
-            <span>今すぐ推しメンバーを登録する</span>
-          </button>
-        </div>
-      ) : (
-        <>
-          {/* Section 1: Favorite Talents Cards Grid */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
+      {/* Member Management Modal */}
+      {showManageModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn">
+          <div className="bg-[#0E1522] border border-slate-800 rounded-3xl max-w-2xl w-full p-6 space-y-5 max-h-[90vh] flex flex-col shadow-2xl">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-800">
               <div className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-amber-400" />
-                <h3 className="text-base sm:text-lg font-black text-white font-gaming">
-                  登録推しタレント一覧 ({favoriteMembers.length}名)
-                </h3>
+                <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <h3 className="text-lg font-bold text-white font-gaming">推しメンバー管理</h3>
               </div>
-              <span className="text-xs text-slate-400">
-                カードをクリックすると詳細プロフィールへジャンプ
-              </span>
+              <button
+                onClick={() => setShowManageModal(false)}
+                className="text-slate-400 hover:text-white p-1 rounded-lg"
+              >
+                ✕
+              </button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {favoriteMembers.map(member => {
-                const memberLive = schedules.find(s => s.memberId === member.id && s.status === 'live');
-                const memberUpcoming = schedules.find(s => s.memberId === member.id && s.status === 'upcoming');
+            <div className="flex gap-2">
+              <div className="flex-1 relative">
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                <input
+                  type="text"
+                  value={searchMemberQuery}
+                  onChange={(e) => setSearchMemberQuery(e.target.value)}
+                  placeholder="メンバー名で検索..."
+                  className="w-full bg-[#141C2B] border border-slate-700/80 rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-amber-400"
+                />
+              </div>
+              <div className="bg-[#141C2B] p-1 rounded-xl border border-slate-700 flex text-xs font-bold">
+                {['ALL', 'JP', 'EN'].map(b => (
+                  <button
+                    key={b}
+                    onClick={() => setManageBranchFilter(b)}
+                    className={`px-3 py-1 rounded-lg transition-colors ${
+                      manageBranchFilter === b ? 'bg-amber-400 text-slate-950 font-black' : 'text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    {b}
+                  </button>
+                ))}
+              </div>
+            </div>
 
+            <div className="flex-1 overflow-y-auto space-y-2 pr-1 custom-scrollbar">
+              {filteredAllMembers.map(m => {
+                const isFav = favorites.includes(m.id);
                 return (
                   <div
-                    key={member.id}
-                    onClick={() => onSelectMember(member)}
-                    className="group cursor-pointer bg-[#0D131E] hover:bg-[#141C2C] border border-slate-800 hover:border-amber-400/60 p-4 rounded-2xl transition-all duration-200 shadow-lg hover:shadow-glow-orange flex flex-col justify-between relative hover:-translate-y-1"
+                    key={m.id}
+                    onClick={() => onToggleFavorite(m.id)}
+                    className={`flex items-center justify-between p-3 rounded-xl border cursor-pointer transition-all ${
+                      isFav 
+                        ? 'bg-amber-500/10 border-amber-500/40 shadow-sm' 
+                        : 'bg-[#141C2B]/60 border-slate-800 hover:border-slate-700'
+                    }`}
                   >
-                    {/* Un-favorite button */}
+                    <div className="flex items-center gap-3">
+                      <img src={m.avatar} alt={m.name} className="w-10 h-10 rounded-full object-cover" />
+                      <div>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-xs font-bold text-white">{m.name}</span>
+                          <span className="text-[10px] text-slate-400">{m.unit}</span>
+                        </div>
+                        <span className="text-[11px] text-slate-400">{m.fanName}</span>
+                      </div>
+                    </div>
+
                     <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onToggleFavorite(member.id);
-                      }}
-                      className="absolute top-3 right-3 p-1.5 rounded-full bg-black/60 hover:bg-black text-amber-400 hover:text-red-400 transition-colors z-10"
-                      title="推しから解除"
+                      className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                        isFav 
+                          ? 'bg-amber-400 text-slate-950 shadow-md font-black' 
+                          : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                      }`}
                     >
-                      <Star className="w-4 h-4 fill-amber-400 hover:fill-none" />
+                      {isFav ? '登録中 ★' : '+ 追加'}
                     </button>
-
-                    <div>
-                      {/* Top: Avatar & Live Status */}
-                      <div className="flex items-center gap-3.5 mb-3">
-                        <div 
-                          className="w-14 h-14 rounded-full p-[2px] shadow-lg shrink-0 relative group-hover:scale-105 transition-transform"
-                          style={{ background: `linear-gradient(135deg, ${member.color}, #FFB800)` }}
-                        >
-                          <img 
-                            src={member.avatar} 
-                            alt={member.name}
-                            className="w-full h-full object-cover object-[center_12%] rounded-full bg-slate-900" 
-                          />
-                          {memberLive && (
-                            <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-red-600 text-[8px] font-black text-white px-1.5 py-0.2 rounded-full uppercase tracking-wider animate-pulse">
-                              LIVE
-                            </span>
-                          )}
-                        </div>
-
-                        <div className="min-w-0 pr-6">
-                          <div className="flex items-center gap-1.5 mb-0.5">
-                            <span className="text-sm font-black text-white group-hover:text-amber-400 transition-colors truncate">
-                              {member.name}
-                            </span>
-                            <span className={`text-[9px] font-black px-1 rounded uppercase ${
-                              member.branch === 'EN' ? 'bg-[#00F0FF]/20 text-[#00F0FF]' : 'bg-[#FF4687]/20 text-[#FF4687]'
-                            }`}>
-                              {member.branch}
-                            </span>
-                          </div>
-                          <div className="text-[11px] text-slate-400 truncate">
-                            {member.unit}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Stream Status Info */}
-                      <div className="bg-[#121927] p-2.5 rounded-xl border border-slate-800/80 mb-3 text-xs">
-                        {memberLive ? (
-                          <div className="flex items-center gap-1.5 text-red-400 font-bold">
-                            <span className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
-                            <span className="truncate">配信中: {memberLive.title}</span>
-                          </div>
-                        ) : memberUpcoming ? (
-                          <div className="text-slate-300">
-                            <span className="text-amber-400 font-bold mr-1">次回予定:</span>
-                            <span>{memberUpcoming.date.split('-').slice(1).join('/')} {memberUpcoming.time}〜</span>
-                          </div>
-                        ) : (
-                          <div className="text-slate-400">
-                            直近アーカイブ 5件あり
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Bottom Action Links */}
-                    <div className="flex items-center justify-between gap-2 pt-2 border-t border-slate-800 text-xs">
-                      <span className="text-[11px] font-bold text-[#00F0FF] group-hover:underline flex items-center gap-0.5">
-                        <span>プロフィール ＆ 5件動画</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </span>
-
-                      <span className="text-[10px] text-slate-400 font-mono">
-                        {member.subscribers}
-                      </span>
-                    </div>
                   </div>
                 );
               })}
             </div>
-          </div>
 
-          {/* Section 2: Schedules for Favorite Talents Only */}
-          <div className="space-y-4 pt-4 border-t border-slate-800">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-[#FF4687]" />
-                <h3 className="text-base sm:text-lg font-black text-white font-gaming">
-                  推しメンバーの配信スケジュール ({favoriteStreams.length}枠)
-                </h3>
-              </div>
-              <span className="text-xs text-slate-400">
-                お気に入りタレント限定の配信枠一覧
-              </span>
-            </div>
-
-            {favoriteStreams.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                {favoriteStreams.map(stream => {
-                  const member = membersMap[stream.memberId];
-                  return (
-                    <StreamCard
-                      key={stream.id}
-                      stream={stream}
-                      member={member}
-                      membersMap={membersMap}
-                      timezone={timezone}
-                      isFavorite={true}
-                      onToggleFavorite={onToggleFavorite}
-                      onSelectStream={onSelectStream}
-                      onSelectMember={onSelectMember}
-                    />
-                  );
-                })}
-              </div>
-            ) : (
-              <div className="bg-[#0E1522] rounded-xl border border-slate-800 p-8 text-center text-slate-400 text-xs">
-                現在、推しメンバーの直近配信予定はありません。
-              </div>
-            )}
-          </div>
-
-          {/* Section 3: Recent Archives from Favorite Talents */}
-          <div className="space-y-4 pt-4 border-t border-slate-800">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Play className="w-4 h-4 text-emerald-400 fill-emerald-400" />
-                <h3 className="text-base sm:text-lg font-black text-white font-gaming">
-                  推しメンバーの最新アーカイブ (VOD)
-                </h3>
-              </div>
-              <span className="text-xs text-slate-400">
-                見逃した過去配信をチェック
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-              {favoriteMembers.flatMap(m => (m.past5Streams ? m.past5Streams.slice(0, 2).map(v => ({ ...v, member: m })) : [])).map((vod, idx) => (
-                <div
-                  key={`${vod.member.id}-${vod.id}-${idx}`}
-                  className="bg-[#0D1420] hover:bg-[#151E2E] border border-slate-800 hover:border-slate-700 p-3 rounded-xl transition-all flex items-center gap-3 shadow-md group"
-                >
-                  <div className="relative w-24 aspect-video rounded-lg overflow-hidden shrink-0 bg-slate-900">
-                    <img 
-                      src={vod.thumbnail} 
-                      alt={vod.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform" 
-                    />
-                    <span className="absolute bottom-1 right-1 bg-black/80 text-[8px] font-mono text-slate-200 px-1 rounded">
-                      {vod.duration}
-                    </span>
-                  </div>
-
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <span className="text-[10px] font-bold text-amber-400 truncate">
-                        {vod.member.name}
-                      </span>
-                      <span className="text-[9px] bg-[#162133] text-slate-400 px-1.5 rounded">
-                        {vod.game}
-                      </span>
-                    </div>
-
-                    <h4 className="text-xs font-semibold text-slate-200 line-clamp-1 group-hover:text-white mb-2">
-                      {vod.title}
-                    </h4>
-
-                    <a
-                      href={vod.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 bg-[#FF4687] hover:bg-[#FF6EA2] text-white text-[10px] font-bold px-2.5 py-1 rounded esports-clip-badge transition-colors shadow-sm"
-                    >
-                      <Play className="w-2.5 h-2.5 fill-white" />
-                      <span>再生</span>
-                      <ExternalLink className="w-2.5 h-2.5 opacity-80" />
-                    </a>
-                  </div>
-                </div>
-              ))}
+            <div className="pt-2 flex justify-end border-t border-slate-800">
+              <button
+                onClick={() => setShowManageModal(false)}
+                className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs px-5 py-2.5 rounded-xl transition-all"
+              >
+                完了
+              </button>
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

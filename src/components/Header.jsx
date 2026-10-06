@@ -229,13 +229,9 @@ export default function Header({
               >
                 <Star className={`w-3.5 h-3.5 ${currentTab === 'favorites' ? 'fill-slate-950 text-slate-950' : 'fill-amber-400 text-amber-400'}`} />
                 <span>推しリスト</span>
-                {favoriteCount > 0 && (
-                  <span className={`text-[10px] font-mono font-bold px-1.5 py-0.2 rounded-full ${
-                    currentTab === 'favorites' ? 'bg-black/30 text-slate-950' : 'bg-amber-400/20 text-amber-300 border border-amber-400/40'
-                  }`}>
-                    {favoriteCount}
-                  </span>
-                )}
+                <span className="bg-amber-500/20 text-amber-300 text-[9px] font-black px-1.5 rounded-full border border-amber-500/40 font-gaming">
+                  SOON
+                </span>
               </button>
 
               <button
