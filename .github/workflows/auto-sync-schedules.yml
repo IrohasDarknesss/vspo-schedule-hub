@@ -1,0 +1,36 @@
+name: Auto Sync & Continuous Verification
+
+on:
+  schedule:
+    # Run periodically every 6 hours to ensure build health and trigger fresh deployments
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allows manual one-click execution from GitHub Actions tab
+  push:
+    branches:
+      - main
+
+jobs:
+  verify-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and verify site integrity
+        run: npm run build
+
+      - name: Summary
+        run: |
+          echo "### 🚀 VSPO! Schedule Hub Sync & Build Verification" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status:** Build verified successfully" >> $GITHUB_STEP_SUMMARY
+          echo "- **Engine:** Minute-by-minute dynamic JST real-time engine active" >> $GITHUB_STEP_SUMMARY
+          echo "- **Deploy target:** Vercel auto-deployment on main branch" >> $GITHUB_STEP_SUMMARY

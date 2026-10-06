@@ -10,7 +10,11 @@ export default function Header({
   timezone, 
   setTimezone,
   liveCount,
-  favoriteCount
+  favoriteCount,
+  autoSyncCountdown = 60,
+  lastSyncTime = '',
+  isRefreshing = false,
+  onRefreshSchedules
 }) {
   const [showTzDropdown, setShowTzDropdown] = useState(false);
   const [currentClock, setCurrentClock] = useState('');
@@ -58,6 +62,14 @@ export default function Header({
           </div>
 
           <div className="flex items-center gap-3">
+            {/* Minute-by-minute Auto-Sync live indicator */}
+            <div className="hidden md:flex items-center gap-1.5 font-mono text-[11px] text-cyan-300 bg-[#142032] px-2.5 py-0.5 rounded-full border border-cyan-500/40 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00F0FF] animate-pulse"></span>
+              <span className="text-cyan-200">毎分自動更新中</span>
+              <span className="text-white font-bold bg-[#0D1522] px-1.5 py-0.2 rounded-full text-[10px] border border-cyan-500/20">
+                次回 {autoSyncCountdown}s
+              </span>
+            </div>
             {/* Timezone Switcher */}
             <div className="relative">
               <button

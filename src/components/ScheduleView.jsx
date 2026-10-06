@@ -20,7 +20,9 @@ export default function ScheduleView({
   isRefreshing,
   hasYoutubeKey,
   isYoutubeSyncActive,
-  onOpenYoutubeModal
+  onOpenYoutubeModal,
+  autoSyncCountdown = 60,
+  lastSyncTime = ''
 }) {
   // Date tab: 'today' | 'yesterday' | 'tomorrow' | 'week'
   const [selectedDateTab, setSelectedDateTab] = useState('today');
@@ -222,20 +224,22 @@ export default function ScheduleView({
 
           {/* Right: Live Sync Indicator & Manual Refresh & Search Input */}
           <div className="flex items-center gap-3 w-full md:w-auto">
-            {/* Realtime Live Indicator & YouTube API Button */}
-            <div className="flex items-center gap-2 bg-[#141C2B] px-3 py-1.5 rounded-xl border border-slate-700/60 text-xs">
+            {/* Realtime Live Indicator with 60s Countdown & Manual Refresh */}
+            <div className="flex items-center gap-2 bg-[#141C2B] px-3 py-1.5 rounded-xl border border-slate-700/60 text-xs shadow-sm">
               <span className="flex items-center gap-1.5 text-emerald-400 font-bold">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span className="hidden sm:inline">リアルタイム同期中</span>
+                <span className="hidden sm:inline">毎分自動更新中</span>
+                <span className="font-mono text-emerald-300 text-[11px] bg-emerald-950/60 px-1.5 py-0.2 rounded border border-emerald-500/30">
+                  {autoSyncCountdown}s
+                </span>
               </span>
-
 
               {onRefreshSchedules && (
                 <button
                   onClick={onRefreshSchedules}
                   disabled={isRefreshing}
-                  className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700/60 transition-colors disabled:opacity-50"
-                  title="スケジュールを手動更新（YouTube API＆JST時計）"
+                  className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700/60 transition-colors disabled:opacity-50 ml-0.5"
+                  title="スケジュールを手動更新（今すぐ同期）"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin text-[#00F0FF]' : ''}`} />
                 </button>

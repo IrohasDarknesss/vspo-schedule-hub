@@ -73,14 +73,33 @@ export default function App() {
     }
   }, [youtubeApiKey]);
 
-  // Real-time automatic background clock poll (every 10 seconds)
-  // Ensures stream status switches from upcoming -> live -> ended in real-time!
+  // Auto-sync engine: minute-by-minute real-time polling (60s countdown)
+  const [autoSyncCountdown, setAutoSyncCountdown] = useState(60);
+  const [lastSyncTime, setLastSyncTime] = useState(() => {
+    const d = new Date();
+    return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`;
+  });
+
+  // Second-by-second countdown for the minute-by-minute refresh engine
   useEffect(() => {
-    const interval = setInterval(() => {
-      setSchedules(getLiveSchedules());
-    }, 10000); // 10s auto-refresh
-    return () => clearInterval(interval);
-  }, []);
+    const timer = setInterval(() => {
+      setAutoSyncCountdown(prev => {
+        if (prev <= 1) {
+          // Re-evaluate schedules and trigger sync
+          setSchedules(getLiveSchedules());
+          if (youtubeApiKey) {
+            syncYouTubeStreams(youtubeApiKey, false);
+          }
+          const d = new Date();
+          setLastSyncTime(`${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`);
+          return 60; // Reset to 60 seconds
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [youtubeApiKey]);
 
   // Merge real YouTube live streams into schedules if present
   const activeSchedules = useMemo(() => {
@@ -97,6 +116,10 @@ export default function App() {
   const handleRefreshSchedules = async () => {
     setIsRefreshing(true);
     setSchedules(getLiveSchedules());
+    setAutoSyncCountdown(60); // Reset timer on manual refresh
+    const d = new Date();
+    setLastSyncTime(`${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}:${String(d.getSeconds()).padStart(2, '0')}`);
+
     if (youtubeApiKey) {
       await syncYouTubeStreams(youtubeApiKey, true);
       showToast('⚡ YouTube API実データ＆JST時計と同期しました', false);
@@ -312,6 +335,10 @@ export default function App() {
           favoriteCount={favorites.length}
           onOpenYoutubeModal={() => setIsYoutubeModalOpen(true)}
           hasYoutubeKey={Boolean(youtubeApiKey)}
+          autoSyncCountdown={autoSyncCountdown}
+          lastSyncTime={lastSyncTime}
+          isRefreshing={isRefreshing}
+          onRefreshSchedules={handleRefreshSchedules}
         />
 
         {/* Live Ticker Bar (Top active streams) - only on schedule view when not viewing individual talent */}
@@ -363,6 +390,8 @@ export default function App() {
                   hasYoutubeKey={Boolean(youtubeApiKey)}
                   isYoutubeSyncActive={Boolean(youtubeApiKey && youtubeLiveStreams.length > 0)}
                   onOpenYoutubeModal={() => setIsYoutubeModalOpen(true)}
+                  autoSyncCountdown={autoSyncCountdown}
+                  lastSyncTime={lastSyncTime}
                 />
               )}
 
