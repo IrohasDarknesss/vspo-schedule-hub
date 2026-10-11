@@ -48,6 +48,12 @@ export default function ScheduleView({
     tomorrow: tomorrowDateStr,
   };
 
+  // Real-time stream counts per date
+  const yesterdayCount = schedules.filter(s => s.date === yesterdayDateStr).length;
+  const todayCount = schedules.filter(s => s.date === todayDateStr).length;
+  const tomorrowCount = schedules.filter(s => s.date === tomorrowDateStr).length;
+  const weekCount = schedules.filter(s => ![yesterdayDateStr, todayDateStr, tomorrowDateStr].includes(s.date)).length;
+
   // Filter streams
   const filteredStreams = schedules.filter(stream => {
     const member = membersMap[stream.memberId];
@@ -174,18 +180,21 @@ export default function ScheduleView({
           <div className="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
             <button
               onClick={() => setSelectedDateTab('yesterday')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 ${
+              className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 flex items-center gap-1.5 ${
                 selectedDateTab === 'yesterday'
-                  ? 'bg-[#1E293B] text-slate-100 border border-slate-600 shadow-md'
+                  ? 'bg-[#1E293B] text-slate-100 border border-slate-600 shadow-md font-black'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800/40'
               }`}
             >
-              昨日 ({yesterdayLabel})
+              <span>昨日 ({yesterdayLabel})</span>
+              <span className="text-[10px] bg-slate-800 px-1.5 py-0.5 rounded-full font-mono text-slate-300 border border-slate-700/60">
+                {yesterdayCount}
+              </span>
             </button>
 
             <button
               onClick={() => setSelectedDateTab('today')}
-              className={`relative px-5 py-2 rounded-xl text-xs sm:text-sm font-black transition-all shrink-0 flex items-center gap-1.5 ${
+              className={`relative px-4 py-2 rounded-xl text-xs sm:text-sm font-black transition-all shrink-0 flex items-center gap-1.5 ${
                 selectedDateTab === 'today'
                   ? 'bg-gradient-to-r from-[#FF4687] to-[#FF6EA2] text-white shadow-lg shadow-pink-950/60 scale-105'
                   : 'text-slate-300 hover:text-white bg-[#162032] border border-slate-700/60'
@@ -196,29 +205,39 @@ export default function ScheduleView({
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
               <span>今日 ({todayLabel})</span>
-              <span className="text-[10px] bg-black/30 px-1.5 py-0.2 rounded font-mono">TODAY</span>
+              <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-mono font-bold ${
+                selectedDateTab === 'today' ? 'bg-black/40 text-pink-100' : 'bg-slate-800 text-slate-300'
+              }`}>
+                {todayCount}
+              </span>
             </button>
 
             <button
               onClick={() => setSelectedDateTab('tomorrow')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 ${
+              className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 flex items-center gap-1.5 ${
                 selectedDateTab === 'tomorrow'
-                  ? 'bg-[#1E293B] text-slate-100 border border-slate-600 shadow-md'
+                  ? 'bg-[#1E293B] text-slate-100 border border-slate-600 shadow-md font-black'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800/40'
               }`}
             >
-              明日 ({tomorrowLabel})
+              <span>明日 ({tomorrowLabel})</span>
+              <span className="text-[10px] bg-slate-800 px-1.5 py-0.5 rounded-full font-mono text-slate-300 border border-slate-700/60">
+                {tomorrowCount}
+              </span>
             </button>
 
             <button
               onClick={() => setSelectedDateTab('week')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 ${
+              className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shrink-0 flex items-center gap-1.5 ${
                 selectedDateTab === 'week'
-                  ? 'bg-[#1E293B] text-slate-100 border border-slate-600 shadow-md'
+                  ? 'bg-[#1E293B] text-slate-100 border border-slate-600 shadow-md font-black'
                   : 'text-slate-400 hover:text-white hover:bg-slate-800/40'
               }`}
             >
-              週間予定
+              <span>週間アーカイブ</span>
+              <span className="text-[10px] bg-slate-800 px-1.5 py-0.5 rounded-full font-mono text-slate-300 border border-slate-700/60">
+                {weekCount}
+              </span>
             </button>
           </div>
 
